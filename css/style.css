@@ -124,7 +124,7 @@ table {
 }
 /*========================================reset code===========================================*/
 body {
-	height: 3000px; /*임시*/
+	height: 30000px; /*임시*/
 }
 .container {
     width: 100%;
@@ -265,13 +265,13 @@ nav > ul > li:nth-child(1) > div {
 	margin-right: auto;
 }
 
-
 .t_line_0 {
     justify-content: center;
     font-size: 24px;
     font-weight: 400;
     margin-top: 150px;
 	display: flex;
+    margin-bottom: 70px;
 }
 .t_line {
     width: 40px;
@@ -293,10 +293,21 @@ nav > ul > li:nth-child(1) > div {
     background-color: white;
     color: black;
 }
-
+.img_2 {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
 .img_2  > ul {
     display: flex;
-	justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img_2  > ul > li {
+    justify-content: space-around;
 }
 
 .img_3 > div , .img_4 > div {
@@ -309,24 +320,25 @@ nav > ul > li:nth-child(1) > div {
 .img_3 , .img_4 {
     margin-top: 100px;
     text-align: center;
-	padding: 0 40px;
+	margin: 0 40px;
 }
 
 .img_3 > img , .img_4 > img {
     width: 219px;
     height: 219px;
 }
+
 /*====================================중요=========================*/
 .controller > span {
-    position: absolute;
     background-color: transparent;
     color: black;
     text-align: center;
     border-radius: 50%;
     padding: 10px 20px;
-    top: 50%;
     font-size: 50px;
     cursor: pointer;
+    position: absolute;
+    /*top: 182%;*/
 }
 
 /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
@@ -358,6 +370,94 @@ nav > ul > li:nth-child(1) > div {
 /*============================================중요====================================*/
 
 /*===================main==================*/
+/*========================footer===================*/
+#last_1 {
+    margin-bottom: 30px;
+}
+#last_1 > ul  {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-top: 1px solid;
+}
+#last_1 > ul > li {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#last_1 > ul > li:last-child{
+    align-items: center;
+}
+
+#last_2{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+#last_2 > ul {
+    margin-top: 50px;
+}
+#last_2 > ul > li {
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+#last_2 > ul > li:nth-child(1){
+    margin-bottom: 20px;
+}
+#last_2 > ul > li > span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#last_3 {
+    padding-top: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#last_3 > div > ul {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+#last_3 > div > ul > li {
+   margin: 0px 30px;
+}
+#last_4 {
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 300px; /*임시*/
+}
+#last_4 > div >input {
+    width: 200px;
+    height: 20px;
+    border: #e2e2e2;
+    margin-top: 20px;
+}
+#last_4  > div > input::placeholder{
+    color: black;
+}
+#last_4 >  div > button {
+    height: 25px;
+    background-color: white;
+    border: 0;
+    position: absolute; /*마지막에 바텀으로 맞춰주기*/
+}
+
+#last_4 > div:nth-child(3) {
+    font-size: 12px;
+    margin-top: 20px;
+}
+#last_4 > div:nth-child(3) > a {
+    color: white;
+}
+
+/*========================footer===================*/
 @media (min-width : 750px) {
     #mobile_nav {
         display: none;
