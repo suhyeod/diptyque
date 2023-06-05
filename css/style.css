@@ -123,9 +123,7 @@ table {
     border-spacing: 0;
 }
 /*========================================reset code===========================================*/
-body {
-	height: 30000px; /*임시*/
-}
+
 .container {
     width: 100%;
 
@@ -247,22 +245,23 @@ nav > ul > li:nth-child(1) > div {
 }
 */
 .nav_img {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: 23%;
-	right: 20%;
-    display: none; /*임시 나중에 바꿔서 자바스크립트 넣기*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 23%;
+    right: 20%;
+    display: none;
+    /*임시 나중에 바꿔서 자바스크립트 넣기*/
     width: 400px;
     height: 400px;
 }
 /*===================nav==================*/
 /*===================main==================*/
 #pc_main {
-	margin-top: 30px;
-	max-width: 1280px;
-	margin-left: auto;
-	margin-right: auto;
+    margin-top: 30px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .t_line_0 {
@@ -270,16 +269,16 @@ nav > ul > li:nth-child(1) > div {
     font-size: 24px;
     font-weight: 400;
     margin-top: 150px;
-	display: flex;
+    display: flex;
     margin-bottom: 70px;
 }
 .t_line {
     width: 40px;
     height: 0.99px;
     background-color: black;
-    margin: 12px 12px;
+    margin: 12px;
 }
-.ADD{
+.ADD {
     width: 140px;
     height: 30px;
     border: 0;
@@ -300,30 +299,34 @@ nav > ul > li:nth-child(1) > div {
     align-items: center;
     margin-bottom: 150px;
 }
-.img_2  > ul {
+.img_2 > ul {
     display: flex;
     margin-right: auto;
     margin-left: auto;
 }
 
-.img_2  > ul > li {
+.img_2 > ul > li {
     justify-content: space-around;
 }
 
-.img_3 > div , .img_4 > div {
+.img_3 > div,
+.img_4 > div {
     margin-bottom: 8px;
 }
-.img_3 > span  , .img_4 > span {
+.img_3 > span,
+.img_4 > span {
     color: #767677;
     font-weight: bold;
 }
-.img_3 , .img_4 {
+.img_3,
+.img_4 {
     margin-top: 100px;
     text-align: center;
-	margin: 0 40px;
+    margin: 0 40px;
 }
 
-.img_3 > img , .img_4 > img {
+.img_3 > img,
+.img_4 > img {
     width: 219px;
     height: 219px;
 }
@@ -345,7 +348,6 @@ nav > ul > li:nth-child(1) > div {
 .controller > span:hover {
     background-color: rgba(128, 128, 128, 0.11);
 }
-
 
 .prev {
     left: 10px;
@@ -374,7 +376,7 @@ nav > ul > li:nth-child(1) > div {
 #last_1 {
     margin-bottom: 30px;
 }
-#last_1 > ul  {
+#last_1 > ul {
     display: flex;
     justify-content: space-around;
     font-size: 12px;
@@ -386,11 +388,11 @@ nav > ul > li:nth-child(1) > div {
     align-items: flex-end;
 }
 
-#last_1 > ul > li:last-child{
+#last_1 > ul > li:last-child {
     align-items: center;
 }
 
-#last_2{
+#last_2 {
     background-color: black;
     color: white;
     display: flex;
@@ -404,7 +406,7 @@ nav > ul > li:nth-child(1) > div {
     cursor: pointer;
     margin-bottom: 4px;
 }
-#last_2 > ul > li:nth-child(1){
+#last_2 > ul > li:nth-child(1) {
     margin-bottom: 20px;
 }
 #last_2 > ul > li > span {
@@ -424,29 +426,30 @@ nav > ul > li:nth-child(1) > div {
     justify-content: center;
 }
 #last_3 > div > ul > li {
-   margin: 0px 30px;
+    margin: 0 30px;
 }
 #last_4 {
     color: white;
     background-color: black;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 300px; /*임시*/
+
 }
-#last_4 > div >input {
+#last_4 > div > input {
     width: 200px;
     height: 20px;
     border: #e2e2e2;
     margin-top: 20px;
 }
-#last_4  > div > input::placeholder{
+#last_4 > div > input::placeholder {
     color: black;
 }
-#last_4 >  div > button {
+#last_4 > div > button {
     height: 25px;
     background-color: white;
     border: 0;
-    position: absolute; /*마지막에 바텀으로 맞춰주기*/
+    position: absolute;
+    /*마지막에 바텀으로 맞춰주기*/
 }
 
 #last_4 > div:nth-child(3) {
@@ -455,6 +458,123 @@ nav > ul > li:nth-child(1) > div {
 }
 #last_4 > div:nth-child(3) > a {
     color: white;
+}
+#last_4 > div:nth-child(4) {
+    width: 200px;
+    height: 20px;
+    margin-top: 50px;
+    background-color: black;
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 18px;
+}
+#last_4 > div:nth-child(4) > div {
+    display: flex;
+}
+#last_4 > div:nth-child(4) > div:nth-child(2) {
+    filter: invert(100%);
+}
+#last_4 > div > ul {
+    display: flex;
+    font-size: 12px;
+    color: #e6e6e6;
+    justify-content: center;
+    margin-top: 30px;
+}
+#last_4 > div > ul > li {
+    margin-right: 50px;
+}
+#last_4 > div > ul > li:nth-child(4) {
+    display: flex;
+}
+#last_4 > div > ul > li > a {
+    color: #e6e6e6;
+    text-decoration: none;
+}
+#last_4 > div > ul > li > a:hover {
+    color: white;
+    text-decoration: underline;
+}
+#last_4 > div:last-child {
+    width: 120px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+#last_5 {
+    text-align: center;
+    background-color: black;
+    color: #e6e6e6;
+    font-size: 12px;
+}
+#last_5 > ul > li > span {
+    font-weight: bold;
+}
+#last_5 > ul > li {
+    padding: 10px 0;
+}
+#last_5 > ul > li > a {
+    text-decoration: none;
+    color: #e6e6e6;
+}
+#last_5 > ul > li > a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#last_5 > ul > ul {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+#last_5 > ul > ul > li {
+    margin-right: 30px;
+}
+#bu {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 0px 20px;
+}
+#bu > div {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bu > div:nth-child(1) {
+    width: 134px;
+    height: 46px;
+    bottom: 2%;
+    background-color: black;
+    border-radius: 30px;
+    line-height: 46px;
+}
+#bu > div:nth-child(1) > img {
+    filter: invert(100%);
+}
+#bu > div:last-child {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: black;
+    left: 95%;
+    bottom: 1%;
+}
+#bu > div:last-child > img {
+    filter: invert(100%);
 }
 
 /*========================footer===================*/
