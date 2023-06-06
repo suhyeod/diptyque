@@ -123,12 +123,15 @@ table {
     border-spacing: 0;
 }
 /*========================================reset code===========================================*/
-
-.container {
-    width: 100%;
-
+body {
+    height: 3000px; /*임시*/
 }
-nav > div:nth-child(1) {
+.pc_container {
+    width: 100%;
+    position: absolute;
+    top: 28%;
+}
+#pc_nav > div:nth-child(1) {
     height: 44px;
     background-color: black;
     font-size: 16px;
@@ -578,13 +581,86 @@ nav > ul > li:nth-child(1) > div {
 }
 
 /*========================footer===================*/
+
+
+
+/*====================mobile===================*/
+
+
+#mobile_nav_1 > ul  {
+    display: flex;
+    justify-content: space-between;
+}
+#mobile_nav_1 > ul  > li:last-child > div {
+    display: flex;
+    gap: 4px;
+}
+#mobile_nav_1 > ul  > li:nth-child(1) , #mobile_nav_1 > ul  > li:nth-child(3) {
+    margin: 10px;
+}
+.line {
+    width: 24px;
+    height: 0.99px;
+    background-color: black;
+    margin-bottom: 6px;
+}
+.line:last-child{
+    width: 50%;
+}
+#mobile_nav {
+    height: 30px;
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+#input_mobile {
+    margin-top: 4px;
+    max-width: 750px;
+    height: 32px;
+    background-color: #f9f9f9;
+    border: 0;
+    font-size: 12px;
+    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48");
+    background-repeat: no-repeat;
+    background-size: 34px;
+    padding: 0 0 0 34px;
+}
+/*=================mobile_main=================*/
+
+.mobile_img > div > img {
+    margin: 0px 25px;
+    max-width: 92%;
+    height: auto;
+}
+.mobile_img > div:nth-child(2){
+    margin-top: 30px;
+    height: 170px;
+    border: 1px solid black;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.mobile_img > div:nth-child(2) > div {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.mobile_img > div:nth-child(2) > div > p > span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*=================mobile_main=================*/
+/*====================mobile===================*/
 @media (min-width : 750px) {
-    #mobile_nav {
+    #mobile_nav , .mobile_container {
         display: none;
     }
 }
 @media(max-width : 750px) {
-    #pc_nav {
+    #pc_nav , .pc_container{
         display: none;
     }
 }
