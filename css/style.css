@@ -124,7 +124,7 @@ table {
 }
 /*========================================reset code===========================================*/
 body {
-    height: 3000px; /*임시*/
+    height: 6000px; /*임시*/
 }
 .pc_container {
     width: 100%;
@@ -628,31 +628,132 @@ nav > ul > li:nth-child(1) > div {
     padding: 0 0 0 34px;
 }
 /*=================mobile_main=================*/
-
-.mobile_img > div > img {
+.mobile_container {
     margin: 0px 25px;
-    max-width: 92%;
+}
+.mobile_img > div > img {
+    max-width: 100%;
     height: auto;
+    margin-top: 100px;
 }
 .mobile_img > div:nth-child(2){
     margin-top: 30px;
-    height: 170px;
     border: 1px solid black;
     text-align: center;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 30px;
 }
 .mobile_img > div:nth-child(2) > div {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
-.mobile_img > div:nth-child(2) > div > p > span {
+.mobile_img > div:nth-child(2) > div > span {
     font-size: 30px;
     font-weight: bold;
 }
+.mobile_img > div:nth-child(2) > div:nth-child(2) {
+    font-size: 0px;
+}
+.img_button {
+    margin: 0px 50px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid black;
+}
+.img_button:hover {
+    background-color: #e6e6e6;
+}
+.mobile_img_1 {
+   margin-top: 100px;
+
+}
+
+.mobile_img_1 > div {
+    display: flex;
+}
+.mobile_img_1 > div > div:nth-child(2){
+    font-size: 22px;
+}
+.line_img {
+    width: 20%;
+    height: 1px;
+    background-color: black;
+    margin-top: 11px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mobile_img_1_1 > div{
+    width: 300px;
+    margin-left: 70px;
+    margin-right: auto;
+    /* overflow: hidden; */
+}
+.mobile_img_1_1 > div{
+    display: flex;
+    align-items: center;
+}
+.mobile_img_1_1 > div > ul{
+    display: flex;
+
+}
+.mobile_img_1_1 > div > ul > li  {
+    text-align: center;
+    padding: 50px 100px 0px;
+}
+.mobile_img_1_1s > span > div , .mobile_img_1_2s > span > div {
+    margin: 10px;
+}
+.mobile_img_1_1s > span , .mobile_img_1_2s > span{
+    color: #767677;
+    font-weight: bold;
+}
+
+
+.mobile_controller > span {
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+
+}
+.mobile_controller > span:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+}
 
 /*=================mobile_main=================*/
+
+/*===================footer=====================*/
+#mobile_last {
+    font-size: 12px;
+    margin-top: 80px;
+    width: 100%;
+    border-top: 0.99px solid black;
+}
+#mobile_last > ul {
+    margin-top: 30px;
+    text-align: center;
+
+}
+#mobile_last > ul > li {
+    width: 50%;
+    height: 71px;
+    float: left;
+    margin: 30px 0px;
+    font-size: 10px;
+    font-weight: bold;
+}
+#mobile_last > ul > li > p {
+    margin-top: 10px;
+}
+/*===================footer=====================*/
 /*====================mobile===================*/
 @media (min-width : 750px) {
     #mobile_nav , .mobile_container {
