@@ -36,12 +36,12 @@ function moveSlide(num, img_cont) {
 prev[0].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
   이전 버튼 눌러도 아무런 반응 없게 하기 위해
-  currentIdx !==0일때만 moveSlide 함수 불러옴 */
+  currentIdx !==0일때만 moveSlide 함수 불러옴
 
     if (currentIdx !== 0) 
         moveSlide(currentIdx - 1, 0);
     }
-);
+); */
 
 next[0].addEventListener('click', function () {
     /* 마지막 슬라이드로 표시 됐을때는
@@ -72,3 +72,21 @@ next[1].addEventListener('click', function () {
         moveSlide(currentIdx + 1, 1);
     }
 }); 
+
+
+//const node = document.querySelectorAll(".help_1 > li:nth-child(1)")
+//const node1 = document.querySelectorAll(".help-lastitem > li ")
+
+
+
+function openhelpitem(e) {  
+    console.log(e.lastElementChild.style.height)
+    if(e.lastElementChild.style.height==''||e.lastElementChild.style.height=='0px'){
+        console.log('aaa')
+        e.lastElementChild.style.height=e.lastElementChild.scrollHeight; + "px"
+    }else{
+        console.log('bbb')
+        e.lastElementChild.style.height='0px';
+    }
+    
+}
