@@ -580,6 +580,10 @@ nav > ul > li:nth-child(1) > div {
     filter: invert(100%);
 }
 
+footer {
+    height: 500px;
+}
+
 /*========================footer===================*/
 
 
@@ -754,9 +758,40 @@ nav > ul > li:nth-child(1) > div {
     margin-top: 10px;
 }
 /*===================footer=====================*/
+
+/*=====================section=====================*/
+section {
+    background-color: aqua; /*임시*/
+}
+.help_1 {
+    cursor: pointer;
+    margin: 0px 0px 30px 0px;
+}
+.help_1 > li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 124x;
+    font-weight: 100;
+}
+
+.help-lastitem {
+    overflow: hidden;
+    transition-duration: 0.5s;
+    font-size: 10px; 
+    line-height: 30px; 
+    color: black;
+    padding: 0px 20px;
+}
+.help-lastitem > li {
+    margin-top: 10px;
+}
+
+
+
+/*=====================section=====================*/
 /*====================mobile===================*/
 @media (min-width : 750px) {
-    #mobile_nav , .mobile_container {
+    #mobile_nav , #input_mobile , #mobile_nav_1 , .mobile_container{
         display: none;
     }
 }
