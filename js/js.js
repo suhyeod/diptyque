@@ -38,7 +38,7 @@ prev[0].addEventListener('click', function () {
   이전 버튼 눌러도 아무런 반응 없게 하기 위해
   currentIdx !==0일때만 moveSlide 함수 불러옴
 
-    if (currentIdx !== 0) 
+    if (currentIdx !== 0)
         moveSlide(currentIdx - 1, 0);
     }
 ); */
@@ -71,22 +71,22 @@ next[1].addEventListener('click', function () {
     if (currentIdx !== slideCount - 1) {
         moveSlide(currentIdx + 1, 1);
     }
-}); 
+});
+
+// const node = document.querySelectorAll(".help_1 > li:nth-child(1)") const
+// node1 = document.querySelectorAll(".help-lastitem > li ")
+function gotop() {
+    scrollTo(0, 0);
+}
+// 스크롤 맨 위로 올라가는 거
 
 
-//const node = document.querySelectorAll(".help_1 > li:nth-child(1)")
-//const node1 = document.querySelectorAll(".help-lastitem > li ")
-
-
-
-function openhelpitem(e) {  
-    console.log(e.lastElementChild.style.height)
-    if(e.lastElementChild.style.height==''||e.lastElementChild.style.height=='0px'){
+function openhelpitem(e , h) {
+    if (e.lastElementChild.style.height == '' || e.lastElementChild.style.height == '0px') {
         console.log('aaa')
-        e.lastElementChild.style.height=e.lastElementChild.scrollHeight; + "px"
-    }else{
+        e.lastElementChild.style.height = h+"px"
+    } else {
         console.log('bbb')
-        e.lastElementChild.style.height='0px';
+        e.lastElementChild.style.height = '0px';
     }
-    
 }
