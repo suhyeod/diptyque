@@ -123,9 +123,7 @@ table {
     border-spacing: 0;
 }
 /*========================================reset code===========================================*/
-body {
-    height: 6000px; /*임시*/
-}
+
 .pc_container {
     width: 100%;
     position: absolute;
@@ -549,7 +547,7 @@ nav > ul > li:nth-child(1) > div {
     display: flex;
     justify-content: space-between;
     color: white;
-    margin: 0px 20px;
+    margin: 0 20px;
 }
 #bu > div {
     position: fixed;
@@ -568,7 +566,7 @@ nav > ul > li:nth-child(1) > div {
 #bu > div:nth-child(1) > img {
     filter: invert(100%);
 }
-#bu > div:last-child {
+.top {
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -586,20 +584,18 @@ footer {
 
 /*========================footer===================*/
 
-
-
 /*====================mobile===================*/
 
-
-#mobile_nav_1 > ul  {
+#mobile_nav_1 > ul {
     display: flex;
     justify-content: space-between;
 }
-#mobile_nav_1 > ul  > li:last-child > div {
+#mobile_nav_1 > ul > li:last-child > div {
     display: flex;
     gap: 4px;
 }
-#mobile_nav_1 > ul  > li:nth-child(1) , #mobile_nav_1 > ul  > li:nth-child(3) {
+#mobile_nav_1 > ul > li:nth-child(1),
+#mobile_nav_1 > ul > li:nth-child(3) {
     margin: 10px;
 }
 .line {
@@ -608,7 +604,7 @@ footer {
     background-color: black;
     margin-bottom: 6px;
 }
-.line:last-child{
+.line:last-child {
     width: 50%;
 }
 #mobile_nav {
@@ -633,14 +629,14 @@ footer {
 }
 /*=================mobile_main=================*/
 .mobile_container {
-    margin: 0px 25px;
+    margin: 0 25px;
 }
 .mobile_img > div > img {
     max-width: 100%;
     height: auto;
     margin-top: 100px;
 }
-.mobile_img > div:nth-child(2){
+.mobile_img > div:nth-child(2) {
     margin-top: 30px;
     border: 1px solid black;
     text-align: center;
@@ -660,10 +656,10 @@ footer {
     font-weight: bold;
 }
 .mobile_img > div:nth-child(2) > div:nth-child(2) {
-    font-size: 0px;
+    font-size: 0;
 }
 .img_button {
-    margin: 0px 50px;
+    margin: 0 50px;
     height: 30px;
     line-height: 30px;
     border: 1px solid black;
@@ -672,14 +668,14 @@ footer {
     background-color: #e6e6e6;
 }
 .mobile_img_1 {
-   margin-top: 100px;
+    margin-top: 100px;
 
 }
 
 .mobile_img_1 > div {
     display: flex;
 }
-.mobile_img_1 > div > div:nth-child(2){
+.mobile_img_1 > div > div:nth-child(2) {
     font-size: 22px;
 }
 .line_img {
@@ -690,32 +686,33 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-.mobile_img_1_1 > div{
+.mobile_img_1_1 > div {
     width: 300px;
     margin-left: 70px;
     margin-right: auto;
     /* overflow: hidden; */
 }
-.mobile_img_1_1 > div{
+.mobile_img_1_1 > div {
     display: flex;
     align-items: center;
 }
-.mobile_img_1_1 > div > ul{
+.mobile_img_1_1 > div > ul {
     display: flex;
 
 }
-.mobile_img_1_1 > div > ul > li  {
+.mobile_img_1_1 > div > ul > li {
     text-align: center;
-    padding: 50px 100px 0px;
+    padding: 50px 100px 0;
 }
-.mobile_img_1_1s > span > div , .mobile_img_1_2s > span > div {
+.mobile_img_1_1s > span > div,
+.mobile_img_1_2s > span > div {
     margin: 10px;
 }
-.mobile_img_1_1s > span , .mobile_img_1_2s > span{
+.mobile_img_1_1s > span,
+.mobile_img_1_2s > span {
     color: #767677;
     font-weight: bold;
 }
-
 
 .mobile_controller > span {
     background-color: transparent;
@@ -750,7 +747,7 @@ footer {
     width: 50%;
     height: 71px;
     float: left;
-    margin: 30px 0px;
+    margin: 30px 0;
     font-size: 10px;
     font-weight: bold;
 }
@@ -760,43 +757,47 @@ footer {
 /*===================footer=====================*/
 
 /*=====================section=====================*/
-section {
-    background-color: aqua; /*임시*/
-}
+
 .help_1 {
     cursor: pointer;
-    margin: 0px 0px 30px 0px;
+    margin: 0 0 30px;
 }
 .help_1 > li {
     display: flex;
     justify-content: space-between;
-    font-size: 124x;
+    font-size: 12px;
     font-weight: 100;
 }
-
+.help_1 > li:last-child {
+    height: 0px;
+    transition-duration: 0.5s;
+}
 .help-lastitem {
     overflow: hidden;
-    transition-duration: 0.5s;
-    font-size: 10px; 
-    line-height: 30px; 
+
+    font-size: 10px;
+    line-height: 30px;
     color: black;
-    padding: 0px 20px;
+    padding: 0 20px;
+
 }
 .help-lastitem > li {
     margin-top: 10px;
 }
 
-
-
 /*=====================section=====================*/
 /*====================mobile===================*/
 @media (min-width : 750px) {
-    #mobile_nav , #input_mobile , #mobile_nav_1 , .mobile_container{
+    #input_mobile,
+    #mobile_nav,
+    #mobile_nav_1,
+    .mobile_container {
         display: none;
     }
 }
 @media(max-width : 750px) {
-    #pc_nav , .pc_container{
+    #pc_nav,
+    .pc_container {
         display: none;
     }
 }
