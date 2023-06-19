@@ -185,6 +185,7 @@ nav > ul > li:nth-child(1) > div {
     background-repeat: no-repeat;
     background-size: 34px;
     padding: 0 0 0 34px;
+    outline: none;
 }
 #input_mobile {
     width: 85%;
@@ -197,6 +198,7 @@ nav > ul > li:nth-child(1) > div {
     background-size: 34px;
     margin: 0 0 10px 30px;
     padding: 0 0 0 34px;
+    outline: none;
 }
 #nav_main > ul {
     margin-top: 30px;
@@ -260,9 +262,7 @@ nav > ul > li:nth-child(1) > div {
 /*===================main==================*/
 #pc_main {
     margin-top: 30px;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 .t_line_0 {
@@ -293,40 +293,47 @@ nav > ul > li:nth-child(1) > div {
     background-color: white;
     color: black;
 }
+
 .img_2 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
+    width: 1470px;
     margin-bottom: 150px;
+    overflow: hidden;
 }
+
 .img_2 > ul {
     display: flex;
+    width: 1470px;
     margin-right: auto;
     margin-left: auto;
+    position: relative;
+    left: 0;
 }
 
-.img_2 > ul > li {
-    justify-content: space-around;
+#pc_main > div:nth-child(2) > div:nth-child(4) > div:nth-child(4) > div:nth-child(4) > div:nth-child(3) > ul {
+    justify-content: center;
 }
 
-.img_3 > div,
+.img_2 > ul > li > div > span,
 .img_4 > div {
     margin-bottom: 8px;
 }
-.img_3 > span,
+.img_2 > ul > li > div > span,
 .img_4 > span {
     color: #767677;
     font-weight: bold;
 }
-.img_3,
+.img_2 > ul > li,
 .img_4 {
     margin-top: 100px;
     text-align: center;
     margin: 0 40px;
 }
 
-.img_3 > img,
+.img_2 > ul > li > img,
 .img_4 > img {
     width: 219px;
     height: 219px;
@@ -441,6 +448,7 @@ nav > ul > li:nth-child(1) > div {
     height: 20px;
     border: #e2e2e2;
     margin-top: 20px;
+    outline: none;
 }
 #last_4 > div > input::placeholder {
     color: black;
@@ -450,7 +458,9 @@ nav > ul > li:nth-child(1) > div {
     background-color: white;
     border: 0;
     position: absolute;
-    /*마지막에 바텀으로 맞춰주기*/
+    bottom: -67px;
+    height: 22px;
+    cursor: pointer;
 }
 
 #last_4 > div:nth-child(3) {
@@ -573,6 +583,7 @@ nav > ul > li:nth-child(1) > div {
     background-color: black;
     left: 95%;
     bottom: 1%;
+    cursor: pointer;
 }
 #bu > div:last-child > img {
     filter: invert(100%);
@@ -626,6 +637,7 @@ footer {
     background-repeat: no-repeat;
     background-size: 34px;
     padding: 0 0 0 34px;
+    outline: none;
 }
 /*=================mobile_main=================*/
 .mobile_container {
@@ -769,7 +781,7 @@ footer {
     font-weight: 100;
 }
 .help_1 > li:last-child {
-    height: 0px;
+    height: 0;
     transition-duration: 0.5s;
 }
 .help-lastitem {
