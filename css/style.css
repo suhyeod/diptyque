@@ -288,25 +288,25 @@ nav > ul > li:nth-child(1) > div {
     font-size: 12px;
     font-weight: bold;
     margin-top: 8px;
+    cursor: pointer;
 }
 .ADD:hover {
     background-color: white;
     color: black;
 }
 
-.img_2 {
+.img_2{
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    width: 1470px;
+    width: calc(50vw + 320px);
     margin-bottom: 150px;
     overflow: hidden;
 }
 
 .img_2 > ul {
     display: flex;
-    width: 1470px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
@@ -317,27 +317,23 @@ nav > ul > li:nth-child(1) > div {
     justify-content: center;
 }
 
-.img_2 > ul > li > div > span,
-.img_4 > div {
+.img_2 > ul > li > div {
     margin-bottom: 8px;
 }
-.img_2 > ul > li > div > span,
-.img_4 > span {
+.img_2 > ul > li > span {
     color: #767677;
     font-weight: bold;
 }
-.img_2 > ul > li,
-.img_4 {
+.img_2 > ul > li{
     margin-top: 100px;
     text-align: center;
     margin: 0 40px;
 }
 
-.img_2 > ul > li > img,
-.img_4 > img {
-    width: 219px;
-    height: 219px;
+.img_3_1 , .img_3_2  , .img_3_3  , .img_3_4 , .img_3_5 , .img_3_6 {
+    width: 12.5vw;
 }
+
 
 /*====================================중요=========================*/
 .controller > span {
@@ -662,7 +658,6 @@ footer {
     margin-right: 30px;
     margin-left: 30px;
 }
-
 .mobile_img > div:nth-child(2) > div > span {
     font-size: 30px;
     font-weight: bold;
@@ -697,12 +692,13 @@ footer {
     margin-top: 11px;
     margin-left: auto;
     margin-right: auto;
+
 }
 .mobile_img_1_1 > div {
-    width: 300px;
+    width: 614px;
     margin-left: 70px;
     margin-right: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .mobile_img_1_1 > div {
     display: flex;
@@ -786,12 +782,10 @@ footer {
 }
 .help-lastitem {
     overflow: hidden;
-
     font-size: 10px;
     line-height: 30px;
     color: black;
     padding: 0 20px;
-
 }
 .help-lastitem > li {
     margin-top: 10px;
@@ -799,7 +793,7 @@ footer {
 
 /*=====================section=====================*/
 /*====================mobile===================*/
-@media (min-width : 750px) {
+@media (min-width : 870px) {
     #input_mobile,
     #mobile_nav,
     #mobile_nav_1,
@@ -807,7 +801,7 @@ footer {
         display: none;
     }
 }
-@media(max-width : 750px) {
+@media(max-width : 870px) {
     #pc_nav,
     .pc_container {
         display: none;
