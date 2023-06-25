@@ -264,7 +264,13 @@ nav > ul > li:nth-child(1) > div {
     margin-top: 30px;
     text-align: center;
 }
-
+/* #pc_main > div {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#pc_main > div.show {
+    opacity: 1;
+}*/
 .t_line_0 {
     justify-content: center;
     font-size: 24px;
@@ -706,18 +712,17 @@ footer {
 }
 .mobile_img_1_1 > div > ul {
     display: flex;
-
+    position: relative;
+    left: 0;
 }
 .mobile_img_1_1 > div > ul > li {
     text-align: center;
     padding: 50px 100px 0;
 }
-.mobile_img_1_1s > span > div,
-.mobile_img_1_2s > span > div {
+.mobile_img_1_1 > div > ul  > li > span > div{
     margin: 10px;
 }
-.mobile_img_1_1s > span,
-.mobile_img_1_2s > span {
+ .mobile_img_1_1 > div > ul  > li > span{
     color: #767677;
     font-weight: bold;
 }
