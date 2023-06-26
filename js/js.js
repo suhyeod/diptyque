@@ -172,9 +172,29 @@ next[5].addEventListener('click', function () {
     }
 });
 // pc버전 슬라이드
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //mobile버전 슬라이드
 
-
+/*
 const moblieslides = document.querySelectorAll('.moblle_img_1_1 > div > ul '); //전체 슬라이드 컨테이너
 const moblieslideImg_1 = document.querySelectorAll('.mobile_img_1_1s'); //모든 슬라이드들 _ 1
 const moblieslideImg_2 = document.querySelectorAll('.mobile_img_1_2s'); //모든 슬라이드들 _ 2
@@ -206,6 +226,7 @@ function moveSlide(num, img_cont) {
 //구현 해보고 수정
 
 
+*/
 
 // 첫번째
 prev[5].addEventListener('click', function () {
@@ -332,7 +353,6 @@ moveSlide 함수 불러옴 */
 
 
 
-
 // 완성
 
 function gotop() {
@@ -350,11 +370,10 @@ function openhelpitem(e , h) {
         e.lastElementChild.style.height = '0px';
     }
 }
-
-/*
-//pc버전 op 
+/* 임시
+//pc버전 op 완성
 // HTML 요소를 선택합니다.
-const dataElements = document.querySelectorAll('#pc_main > div');
+const dataElements = document.querySelectorAll('#pc_main > div > div');
 
 // 스크롤 이벤트 핸들러를 등록합니다.
 window.addEventListener('scroll', function() {
@@ -378,4 +397,4 @@ function isElementInViewport(element) {
 }
 
 
-*/
+
