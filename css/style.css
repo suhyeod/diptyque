@@ -264,13 +264,16 @@ nav > ul > li:nth-child(1) > div {
     margin-top: 30px;
     text-align: center;
 }
-/* #pc_main > div {
+#pc_main > div > div {
     opacity: 0;
     transition: opacity 0.5s ease;
+
 }
-#pc_main > div.show {
+
+#pc_main > div > div.show {
     opacity: 1;
-}*/
+}
+/*pc버전 op*/
 .t_line_0 {
     justify-content: center;
     font-size: 24px;
@@ -301,7 +304,7 @@ nav > ul > li:nth-child(1) > div {
     color: black;
 }
 
-.img_2{
+.img_2 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -330,16 +333,20 @@ nav > ul > li:nth-child(1) > div {
     color: #767677;
     font-weight: bold;
 }
-.img_2 > ul > li{
+.img_2 > ul > li {
     margin-top: 100px;
     text-align: center;
     margin: 0 40px;
 }
 
-.img_3_1 , .img_3_2  , .img_3_3  , .img_3_4 , .img_3_5 , .img_3_6 {
+.img_3_1,
+.img_3_2,
+.img_3_3,
+.img_3_4,
+.img_3_5,
+.img_3_6 {
     width: 12.5vw;
 }
-
 
 /*====================================중요=========================*/
 .controller > span {
@@ -719,10 +726,10 @@ footer {
     text-align: center;
     padding: 50px 100px 0;
 }
-.mobile_img_1_1 > div > ul  > li > span > div{
+.mobile_img_1_1 > div > ul > li > span > div {
     margin: 10px;
 }
- .mobile_img_1_1 > div > ul  > li > span{
+.mobile_img_1_1 > div > ul > li > span {
     color: #767677;
     font-weight: bold;
 }
@@ -797,6 +804,64 @@ footer {
 }
 
 /*=====================section=====================*/
+
+.news,
+.perfumes {
+    display: flex;
+    justify-content: space-around;
+}
+.news > ul > li,
+.perfumes > ul > li {
+    margin-top: 51px;
+}
+.candle {
+    display: flex;
+    justify-content: center;
+}
+.candle > ul > li {
+    margin-top: 30px;
+}
+.candle > ul {
+    padding: 0 70px;
+}
+.candle > ul:nth-child(1),
+.candle > ul:nth-child(2),
+.candle > ul:nth-child(3) {
+    border-right: solid #e6e6e6 1px;
+    height: 550px;
+
+}
+.candle > ul > li > span {
+    font-weight: bold;
+}
+.body_care ,
+.decoration ,
+.gift{
+    display: flex;
+    justify-content: space-around;
+}
+.body_care > ul ,
+.decoration > ul    {
+    padding: 0px 70px;
+}
+.body_care > ul > li ,
+.decoration > ul > li {
+    margin-bottom: 30px;
+}
+.body_care > ul > li > span ,
+.decoration > ul > li > span ,
+.gift > ul > li > span{
+    font-weight: bold;
+}
+.body_care > ul:nth-child(1) ,
+.decoration > ul:nth-child(1) ,
+.gift > ul:nth-child(1) {
+    border-right: solid 1px #e6e6e6;
+    height: 350px;
+}
+.gift > ul {
+    padding: 0px 70px;
+}
 /*====================mobile===================*/
 @media (min-width : 870px) {
     #input_mobile,
