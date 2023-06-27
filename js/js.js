@@ -187,54 +187,49 @@ next[5].addEventListener('click', function () {
 
 
 
-
-
-
-
-
 //mobile버전 슬라이드
 
-/*
-const moblieslides = document.querySelectorAll('.moblle_img_1_1 > div > ul '); //전체 슬라이드 컨테이너
-const moblieslideImg_1 = document.querySelectorAll('.mobile_img_1_1s'); //모든 슬라이드들 _ 1
-const moblieslideImg_2 = document.querySelectorAll('.mobile_img_1_2s'); //모든 슬라이드들 _ 2
-const moblieslideImg_3 = document.querySelectorAll('.mobile_img_1_3s'); //모든 슬라이드들 _ 3
-const moblieslideImg_4 = document.querySelectorAll('.mobile_img_1_4s'); //모든 슬라이드들 _ 4
-const moblieslideImg_5 = document.querySelectorAll('.mobile_img_1_5s'); //모든 슬라이드들 _ 5
-let mobliecurrentIdx_1 = 0; //현재 슬라이드 index
-let mobliecurrentIdx_2 = 0; //현재 슬라이드 index
-let mobliecurrentIdx_3 = 0; //현재 슬라이드 index
-let mobliecurrentIdx_4 = 0; //현재 슬라이드 index
-let mobliecurrentIdx_5 = 0; //현재 슬라이드 index
-const moblieslideCount_1 = moblieslideImg_1.length; // 슬라이드 개수
-const moblieslideCount_2 = moblieslideImg_2.length; // 슬라이드 개수
-const moblieslideCount_3 = moblieslideImg_3.length; // 슬라이드 개수
-const moblieslideCount_4 = moblieslideImg_4.length; // 슬라이드 개수
-const moblieslideCount_5 = moblieslideImg_5.length; // 슬라이드 개수
 
-function moveSlide(num, img_cont) {
-  console.log(num, img_cont);
-  slides[img_cont].style.left = 'calc(' + (num*-12.5) + 'vw + ' + (num*-80) + 'px )'; 
-  console.log(slides[img_cont].style.left);
-  if(img_cont == 0) mobliecurrentIdx_1 = num;
-  if(img_cont == 1) mobliecurrentIdx_2 = num;
-  if(img_cont == 2) mobliecurrentIdx_3 = num;
-  if(img_cont == 3) mobliecurrentIdx_4 = num;
-  if(img_cont == 4) mobliecurrentIdx_5 = num;
+const mobileslides = document.querySelectorAll('.mobile_img_1_1 > div > ul '); //전체 슬라이드 컨테이너
+const mobileslideImg_1 = document.querySelectorAll('.mobile_img_1_1s'); //모든 슬라이드들 _ 1
+const mobileslideImg_2 = document.querySelectorAll('.mobile_img_1_2s'); //모든 슬라이드들 _ 2
+const mobileslideImg_3 = document.querySelectorAll('.mobile_img_1_3s'); //모든 슬라이드들 _ 3
+const mobileslideImg_4 = document.querySelectorAll('.mobile_img_1_4s'); //모든 슬라이드들 _ 4
+const mobileslideImg_5 = document.querySelectorAll('.mobile_img_1_5s'); //모든 슬라이드들 _ 5
+let mobilecurrentIdx_1 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_2 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_3 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_4 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_5 = 0; //현재 슬라이드 index
+const mobileslideCount_1 = mobileslideImg_1.length; // 슬라이드 개수
+const mobileslideCount_2 = mobileslideImg_2.length; // 슬라이드 개수
+const mobileslideCount_3 = mobileslideImg_3.length; // 슬라이드 개수
+const mobileslideCount_4 = mobileslideImg_4.length; // 슬라이드 개수
+const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
+
+function moveSlide(num, mobile_img_cont) {
+  console.log(num, mobile_img_cont);
+  mobileslides[mobile_img_cont].style.left = 'calc(' + (num*30  ) + 'vw + ' + (num*50) + 'px )'; 
+  console.log(mobileslides[mobile_img_cont].style.left);
+  if(mobile_img_cont == 0) mobilecurrentIdx_1 = num;
+  if(mobile_img_cont == 1) mobilecurrentIdx_2 = num;
+  if(mobile_img_cont == 2) mobilecurrentIdx_3 = num;
+  if(mobile_img_cont == 3) mobilecurrentIdx_4 = num;
+  if(mobile_img_cont == 4) mobilecurrentIdx_5 = num;
 }
 
 //구현 해보고 수정
 
 
-*/
+
 
 // 첫번째
 prev[5].addEventListener('click', function () {
   /*첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴*/
-  if (mobliecurrentIdx_1 !== 0)
-      moveSlide(mobliecurrentIdx_1 - 1, 0);
+  if (mobilecurrentIdx_1 !== 0)
+      moveSlide(mobilecurrentIdx_1 - 1, 5);
   }
 ); 
 
@@ -243,8 +238,8 @@ next[5].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobliecurrentIdx_1 !== slideCount_1 - 4) {
-      moveSlide(mobliecurrentIdx_1 + 1, 0);
+  if (mobilecurrentIdx_1 !== slideCount_1 - 4) {
+      moveSlide(mobilecurrentIdx_1 + 1, 0);
   }
 });
 
@@ -256,8 +251,8 @@ prev[6].addEventListener('click', function () {
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobliecurrentIdx_2 !== 0) 
-      moveSlide(mobliecurrentIdx_2 - 1, 1);
+  if (mobilecurrentIdx_2 !== 0) 
+      moveSlide(mobilecurrentIdx_2 - 1, 1);
   }
 );
 
@@ -266,8 +261,8 @@ next[6].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobliecurrentIdx_2 !== slideCount_2 - 4) {
-      moveSlide(mobliecurrentIdx_2 + 1, 1);
+  if (mobilecurrentIdx_2 !== slideCount_2 - 4) {
+      moveSlide(mobilecurrentIdx_2 + 1, 1);
   }
 });
 
@@ -279,8 +274,8 @@ prev[7].addEventListener('click', function () {
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobliecurrentIdx_3 !== 0) 
-      moveSlide(mobliecurrentIdx_3 - 1, 2);
+  if (mobilecurrentIdx_3 !== 0) 
+      moveSlide(mobilecurrentIdx_3 - 1, 2);
   }
 );
 
@@ -289,8 +284,8 @@ next[7].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobliecurrentIdx_3 !== slideCount_3 - 4) {
-      moveSlide(mobliecurrentIdx_3 + 1, 2);
+  if (mobilecurrentIdx_3 !== slideCount_3 - 4) {
+      moveSlide(mobilecurrentIdx_3 + 1, 2);
   }
 });
 
@@ -302,8 +297,8 @@ prev[8].addEventListener('click', function () {
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobliecurrentIdx_4 !== 0) 
-      moveSlide(mobliecurrentIdx_4 - 1, 3);
+  if (mobilecurrentIdx_4 !== 0) 
+      moveSlide(mobilecurrentIdx_4 - 1, 3);
   }
 );
 
@@ -312,8 +307,8 @@ next[8].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobliecurrentIdx_4 !== slideCount_4 - 4) {
-      moveSlide(mobliecurrentIdx_4 + 1, 3);
+  if (mobilecurrentIdx_4 !== slideCount_4 - 4) {
+      moveSlide(mobilecurrentIdx_4 + 1, 3);
   }
 });
 
@@ -325,8 +320,8 @@ prev[9].addEventListener('click', function () {
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobliecurrentIdx_5 !== 0) 
-      moveSlide(mobliecurrentIdx_5 - 1, 4);
+  if (mobilecurrentIdx_5 !== 0) 
+      moveSlide(mobilecurrentIdx_5 - 1, 4);
   }
 );
 
@@ -335,8 +330,8 @@ next[9].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (currentIdx_5 !== slideCount_5 - 4) {
-      moveSlide(currentIdx_5 + 1, 4);
+  if (mobilecurrentIdx_5 !== slideCount_5 - 4) {
+      moveSlide(mobilecurrentIdx_5 + 1, 4);
   }
 });
 
@@ -348,7 +343,67 @@ moveSlide 함수 불러옴 */
 
 
 
+let node1 = document.querySelectorAll("#nav_main > ul > li:nth-child(1)");
+let node2 =  document.querySelectorAll(".news");
+let node3 = document.querySelectorAll("#nav_main > ul > li:nth-child(2)");
+let node4 =  document.querySelectorAll(".perfumes");
+let node5 = document.querySelectorAll("#nav_main > ul > li:nth-child(3)");
+let node6 =  document.querySelectorAll(".candle");
+let node7 = document.querySelectorAll("#nav_main > ul > li:nth-child(4)");
+let node8 =  document.querySelectorAll(".body_care");
+let node9 = document.querySelectorAll("#nav_main > ul > li:nth-child(5)");
+let node10 =  document.querySelectorAll(".decoration");
+let node11 = document.querySelectorAll("#nav_main > ul > li:nth-child(6)");
+let node12 =  document.querySelectorAll(".gift");
 
+node1.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node2[index].style.height=node2[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node2[index].style.height="0px";
+    })
+})
+node3.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node4[index].style.height=node4[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node4[index].style.height="0px";
+    })
+})
+node5.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node6[index].style.height=node6[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node6[index].style.height="0px";
+    })
+})
+node7.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node8[index].style.height=node8[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node8[index].style.height="0px";
+    })
+})
+node9.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node10[index].style.height=node10[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node10[index].style.height="0px";
+    })
+})
+node11.forEach((Element,index)=>{
+    Element.addEventListener("mouseover",()=>{
+        node12[index].style.height=node12[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout",()=>{
+        node12[index].style.height="0px";
+    })
+})
 
 
 
@@ -361,16 +416,6 @@ function gotop() {
 // 스크롤 맨 위로 올라가는 거
 
 
-function openhelpitem(e , h) {
-    if (e.lastElementChild.style.height == '' || e.lastElementChild.style.height == '0px') {
-        console.log('aaa')
-        e.lastElementChild.style.height = h+"px"
-    } else {
-        console.log('bbb')
-        e.lastElementChild.style.height = '0px';
-    }
-}
-/* 임시
 //pc버전 op 완성
 // HTML 요소를 선택합니다.
 const dataElements = document.querySelectorAll('#pc_main > div > div');
