@@ -214,52 +214,14 @@ nav > ul > li:nth-child(1) > div {
     padding: 0 0 4px;
     cursor: pointer;
 }
-/*
-#nav_next {
-    display: flex;
-    width: 100%;
-    background-color: white;
-    
-    position: absolute;
-    left: 13%;
-    top: 22%;
-    transition-duration: 0.5s;
-}
-#nav_next > div {
-    margin-top: 20px;
-    margin-right: 30px;
-    white-space: nowrap;
-}
-#nav_next > :not(.not_img){
-    width: 135px;
-}
 
-#nav_next > div > ul > li {
-    color: gray;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-#nav_next > div > ul > li > span{
-    color: black;
-    font-weight: bold;
-}
-#nav_next > div > ul > li:nth-child(1){
-    margin-bottom: 50px;
-}
-*/
-.nav_img {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 23%;
-    right: 20%;
-    display: none;
-    /*임시 나중에 바꿔서 자바스크립트 넣기*/
-    width: 400px;
-    height: 400px;
-}
 /*===================nav==================*/
 /*===================main==================*/
+#pc_main > div > div > img {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/*pc버전 op*/
 #pc_main {
     margin-top: 30px;
     text-align: center;
@@ -267,7 +229,6 @@ nav > ul > li:nth-child(1) > div {
 #pc_main > div > div {
     opacity: 0;
     transition: opacity 0.5s ease;
-
 }
 
 #pc_main > div > div.show {
@@ -654,7 +615,6 @@ footer {
 }
 .mobile_img > div > img {
     max-width: 100%;
-    height: auto;
     margin-top: 100px;
 }
 .mobile_img > div:nth-child(2) {
@@ -748,7 +708,14 @@ footer {
 .mobile_controller > span:hover {
     background-color: rgba(128, 128, 128, 0.11);
 }
+.mobile_img_1_1s ,
+.mobile_img_1_2s ,
+.mobile_img_1_3s ,
+.mobile_img_1_4s ,
+.mobile_img_1_5s {
+    width: 30vw;
 
+}
 /*=================mobile_main=================*/
 
 /*===================footer=====================*/
@@ -806,20 +773,29 @@ footer {
 /*=====================section=====================*/
 
 .news,
-.perfumes {
+.perfumes ,
+.body_care ,
+.decoration ,
+.gift ,
+.candle {
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    transition-duration: 0.5s;
+    height: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
 }
-.news > ul > li,
+.news > ul:nth-child(1){
+    margin-top: 35px;
+}
+.news > ul > li , 
 .perfumes > ul > li {
-    margin-top: 51px;
-}
-.candle {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 51px;
 }
 .candle > ul > li {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .candle > ul {
     padding: 0 70px;
@@ -834,18 +810,13 @@ footer {
 .candle > ul > li > span {
     font-weight: bold;
 }
-.body_care ,
-.decoration ,
-.gift{
-    display: flex;
-    justify-content: space-around;
-}
 .body_care > ul ,
 .decoration > ul    {
     padding: 0px 70px;
 }
 .body_care > ul > li ,
-.decoration > ul > li {
+.decoration > ul > li ,
+.gift > ul > li{
     margin-bottom: 30px;
 }
 .body_care > ul > li > span ,
@@ -873,7 +844,8 @@ footer {
 }
 @media(max-width : 870px) {
     #pc_nav,
-    .pc_container {
+    .pc_container ,
+    #pc_top_nav{
         display: none;
     }
 }
