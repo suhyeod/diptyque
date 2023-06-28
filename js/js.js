@@ -21,9 +21,27 @@ const slideCount_6 = slideImg_6.length; // 슬라이드 개수
 const prev = document.querySelectorAll('.prev'); //이전 버튼
 const next = document.querySelectorAll('.next'); //다음 버튼
 
+const mobileslides = document.querySelectorAll('.mobile_img_1_1 > div > ul'); //전체 슬라이드 컨테이너
+const mobileslideImg_1 = document.querySelectorAll('.mobile_img_1_1s'); //모든 슬라이드들 _ 1
+const mobileslideImg_2 = document.querySelectorAll('.mobile_img_1_2s'); //모든 슬라이드들 _ 2
+const mobileslideImg_3 = document.querySelectorAll('.mobile_img_1_3s'); //모든 슬라이드들 _ 3
+const mobileslideImg_4 = document.querySelectorAll('.mobile_img_1_4s'); //모든 슬라이드들 _ 4
+const mobileslideImg_5 = document.querySelectorAll('.mobile_img_1_5s'); //모든 슬라이드들 _ 5
+let mobilecurrentIdx_1 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_2 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_3 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_4 = 0; //현재 슬라이드 index
+let mobilecurrentIdx_5 = 0; //현재 슬라이드 index
+const mobileslideCount_1 = mobileslideImg_1.length; // 슬라이드 개수
+const mobileslideCount_2 = mobileslideImg_2.length; // 슬라이드 개수
+const mobileslideCount_3 = mobileslideImg_3.length; // 슬라이드 개수
+const mobileslideCount_4 = mobileslideImg_4.length; // 슬라이드 개수
+const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
+
 console.log(slideCount_1, slideCount_2);
 
 function moveSlide(num, img_cont) {
+  if(img_cont < 6) {
     console.log(num, img_cont);
     slides[img_cont].style.left = 'calc(' + (num*-12.5) + 'vw + ' + (num*-80) + 'px )'; 
     console.log(slides[img_cont].style.left);
@@ -33,6 +51,18 @@ function moveSlide(num, img_cont) {
     if(img_cont == 3) currentIdx_4 = num;
     if(img_cont == 4) currentIdx_5 = num;
     if(img_cont == 5) currentIdx_6 = num;
+  }
+  else {
+    console.log(num, img_cont);
+    img_cont -= 6;
+    mobileslides[img_cont].style.left = 'calc(' + (num*-25) + 'vw + ' + (num*-200) + 'px )'; 
+    console.log(mobileslides[img_cont].style.left);
+    if(img_cont == 0) mobilecurrentIdx_1 = num;
+    if(img_cont == 1) mobilecurrentIdx_2 = num;
+    if(img_cont == 2) mobilecurrentIdx_3 = num;
+    if(img_cont == 3) mobilecurrentIdx_4 = num;
+    if(img_cont == 4) mobilecurrentIdx_5 = num;
+  }
 }
 
 
@@ -175,107 +205,41 @@ next[5].addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //mobile버전 슬라이드
-
-
-const mobileslides = document.querySelectorAll('.mobile_img_1_1 > div > ul '); //전체 슬라이드 컨테이너
-const mobileslideImg_1 = document.querySelectorAll('.mobile_img_1_1s'); //모든 슬라이드들 _ 1
-const mobileslideImg_2 = document.querySelectorAll('.mobile_img_1_2s'); //모든 슬라이드들 _ 2
-const mobileslideImg_3 = document.querySelectorAll('.mobile_img_1_3s'); //모든 슬라이드들 _ 3
-const mobileslideImg_4 = document.querySelectorAll('.mobile_img_1_4s'); //모든 슬라이드들 _ 4
-const mobileslideImg_5 = document.querySelectorAll('.mobile_img_1_5s'); //모든 슬라이드들 _ 5
-let mobilecurrentIdx_1 = 0; //현재 슬라이드 index
-let mobilecurrentIdx_2 = 0; //현재 슬라이드 index
-let mobilecurrentIdx_3 = 0; //현재 슬라이드 index
-let mobilecurrentIdx_4 = 0; //현재 슬라이드 index
-let mobilecurrentIdx_5 = 0; //현재 슬라이드 index
-const mobileslideCount_1 = mobileslideImg_1.length; // 슬라이드 개수
-const mobileslideCount_2 = mobileslideImg_2.length; // 슬라이드 개수
-const mobileslideCount_3 = mobileslideImg_3.length; // 슬라이드 개수
-const mobileslideCount_4 = mobileslideImg_4.length; // 슬라이드 개수
-const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
-
-function moveSlide(num, mobile_img_cont) {
-  console.log(num, mobile_img_cont);
-  mobileslides[mobile_img_cont].style.left = 'calc(' + (num*30  ) + 'vw + ' + (num*50) + 'px )'; 
-  console.log(mobileslides[mobile_img_cont].style.left);
-  if(mobile_img_cont == 0) mobilecurrentIdx_1 = num;
-  if(mobile_img_cont == 1) mobilecurrentIdx_2 = num;
-  if(mobile_img_cont == 2) mobilecurrentIdx_3 = num;
-  if(mobile_img_cont == 3) mobilecurrentIdx_4 = num;
-  if(mobile_img_cont == 4) mobilecurrentIdx_5 = num;
-}
-
-//구현 해보고 수정
 
 
 
 
 // 첫번째
-prev[5].addEventListener('click', function () {
+prev[6].addEventListener('click', function () {
   /*첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴*/
   if (mobilecurrentIdx_1 !== 0)
-      moveSlide(mobilecurrentIdx_1 - 1, 5);
+      moveSlide(mobilecurrentIdx_1 - 1, 6);
   }
 ); 
-
-next[5].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
-다음 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_1 !== slideCount_1 - 4) {
-      moveSlide(mobilecurrentIdx_1 + 1, 0);
-  }
-});
-
-
-
-//두번째
-prev[6].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
-이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴 */
-
-  if (mobilecurrentIdx_2 !== 0) 
-      moveSlide(mobilecurrentIdx_2 - 1, 1);
-  }
-);
 
 next[6].addEventListener('click', function () {
   /* 마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_2 !== slideCount_2 - 4) {
-      moveSlide(mobilecurrentIdx_2 + 1, 1);
+  if (mobilecurrentIdx_1 !== mobileslideCount_1 - 1) {
+      moveSlide(mobilecurrentIdx_1 + 1, 6);
   }
 });
 
 
 
-//세번째
+//두번째
 prev[7].addEventListener('click', function () {
   /*첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobilecurrentIdx_3 !== 0) 
-      moveSlide(mobilecurrentIdx_3 - 1, 2);
+  if (mobilecurrentIdx_2 !== 0) 
+      moveSlide(mobilecurrentIdx_2 - 1, 7);
   }
 );
 
@@ -284,21 +248,21 @@ next[7].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_3 !== slideCount_3 - 4) {
-      moveSlide(mobilecurrentIdx_3 + 1, 2);
+  if (mobilecurrentIdx_2 !== mobileslideCount_2 - 7) {
+      moveSlide(mobilecurrentIdx_2 + 1, 7);
   }
 });
 
 
 
-//네번째
+//세번째
 prev[8].addEventListener('click', function () {
   /*첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobilecurrentIdx_4 !== 0) 
-      moveSlide(mobilecurrentIdx_4 - 1, 3);
+  if (mobilecurrentIdx_3 !== 0) 
+      moveSlide(mobilecurrentIdx_3 - 1, 8);
   }
 );
 
@@ -307,21 +271,21 @@ next[8].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_4 !== slideCount_4 - 4) {
-      moveSlide(mobilecurrentIdx_4 + 1, 3);
+  if (mobilecurrentIdx_3 !== mobileslideCount_3 - 1) {
+      moveSlide(mobilecurrentIdx_3 + 1, 8);
   }
 });
 
 
 
-//다섯번째
+//네번째
 prev[9].addEventListener('click', function () {
   /*첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수 불러옴 */
 
-  if (mobilecurrentIdx_5 !== 0) 
-      moveSlide(mobilecurrentIdx_5 - 1, 4);
+  if (mobilecurrentIdx_4 !== 0) 
+      moveSlide(mobilecurrentIdx_4 - 1, 9);
   }
 );
 
@@ -330,8 +294,31 @@ next[9].addEventListener('click', function () {
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
 moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_5 !== slideCount_5 - 4) {
-      moveSlide(mobilecurrentIdx_5 + 1, 4);
+  if (mobilecurrentIdx_4 !== mobileslideCount_4 - -1) {
+      moveSlide(mobilecurrentIdx_4 + 1, 9);
+  }
+});
+
+
+
+//다섯번째
+prev[10].addEventListener('click', function () {
+  /*첫 번째 슬라이드로 표시 됐을때는
+이전 버튼 눌러도 아무런 반응 없게 하기 위해
+currentIdx !==0일때만 moveSlide 함수 불러옴 */
+
+  if (mobilecurrentIdx_5 !== 0) 
+      moveSlide(mobilecurrentIdx_5 - 1, 10);
+  }
+);
+
+next[10].addEventListener('click', function () {
+  /* 마지막 슬라이드로 표시 됐을때는
+다음 버튼 눌러도 아무런 반응 없게 하기 위해
+currentIdx !==slideCount - 1 일때만
+moveSlide 함수 불러옴 */
+  if (mobilecurrentIdx_5 !== mobileslideCount_5 - -3) {
+      moveSlide(mobilecurrentIdx_5 + 1, 10);
   }
 });
 
@@ -440,6 +427,12 @@ function isElementInViewport(element) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-
-
-
+function openhelpitem(e , h) {
+  if (e.lastElementChild.style.height == '' || e.lastElementChild.style.height == '0px') {
+      console.log('aaa')
+      e.lastElementChild.style.height = h+"px"
+  } else {
+      console.log('bbb')
+      e.lastElementChild.style.height = '0px';
+  }
+}
