@@ -181,7 +181,8 @@ nav > ul > li:nth-child(1) > div {
     background-color: #f9f9f9;
     border: 0;
     font-size: 14px;
-    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48");
+    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48.png");
+    background-size: 100px 100px;
     background-repeat: no-repeat;
     background-size: 34px;
     padding: 0 0 0 34px;
@@ -193,7 +194,7 @@ nav > ul > li:nth-child(1) > div {
     background-color: #f9f9f9;
     border: 0;
     font-size: 14px;
-    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48");
+    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48.png");
     background-repeat: no-repeat;
     background-size: 34px;
     margin: 0 0 10px 30px;
@@ -643,6 +644,7 @@ footer {
     height: 30px;
     line-height: 30px;
     border: 1px solid black;
+    cursor: pointer;
 }
 .img_button:hover {
     background-color: #e6e6e6;
@@ -668,7 +670,7 @@ footer {
 
 }
 .mobile_img_1_1 > div {
-    width: 614px;
+    width: 1200px;
     margin-left: 70px;
     margin-right: auto;
     overflow: hidden;
@@ -684,7 +686,7 @@ footer {
 }
 .mobile_img_1_1 > div > ul > li {
     text-align: center;
-    padding: 50px 100px 0;
+    margin: 50px 100px 0;
 }
 .mobile_img_1_1 > div > ul > li > span > div {
     margin: 10px;
@@ -713,7 +715,7 @@ footer {
 .mobile_img_1_3s ,
 .mobile_img_1_4s ,
 .mobile_img_1_5s {
-    width: 30vw;
+    width: 25vw;
 
 }
 /*=================mobile_main=================*/
@@ -778,6 +780,7 @@ footer {
 .decoration ,
 .gift ,
 .candle {
+    position: relative;
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
@@ -786,6 +789,7 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     background-color: white;
+    z-index: 999;
 }
 .news > ul:nth-child(1){
     margin-top: 35px;
@@ -834,7 +838,7 @@ footer {
     padding: 0px 70px;
 }
 /*====================mobile===================*/
-@media (min-width : 870px) {
+@media (min-width : 1200px) {
     #input_mobile,
     #mobile_nav,
     #mobile_nav_1,
@@ -842,7 +846,7 @@ footer {
         display: none;
     }
 }
-@media(max-width : 870px) {
+@media(max-width : 1200px) {
     #pc_nav,
     .pc_container ,
     #pc_top_nav{
