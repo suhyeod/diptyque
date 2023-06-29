@@ -141,36 +141,36 @@ table {
 nav {
     font-size: 12px;
 }
-nav > ul > li {
+#pc_nav > ul > li {
     display: flex;
 }
-nav > ul {
+#pc_nav > ul {
     margin: 0 100px;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
-nav > ul > li:last-child > div {
+#pc_nav > ul > li:last-child > div {
     padding: 0 16px 0 8px;
 }
 
-nav > ul > li > div {
+#pc_nav > ul > li > div {
     display: flex;
 
 }
-nav > ul > li > div > img {
+#pc_nav > ul > li > div > img {
     margin-top: -2px;
     margin-left: 8px;
 }
-nav > ul > li > div:nth-child(1) {
+#pc_nav > ul > li > div:nth-child(2) {
     border-right: 1px solid black;
     height: 15px;
 }
-nav > ul > li:nth-child(1) > div:nth-child(2) {
+#pc_nav > ul > li:nth-child(1) > div:nth-child(2) {
     border-right: 1px solid black;
     height: 15px;
 }
-nav > ul > li:nth-child(1) > div {
+#pc_nav > ul > li:nth-child(1) > div {
     margin-right: 16px;
 }
 
@@ -189,11 +189,11 @@ nav > ul > li:nth-child(1) > div {
     outline: none;
 }
 #input_mobile {
-    width: 85%;
-    height: 34px;
+    width: 90%;
+    height: 32px;
     background-color: #f9f9f9;
     border: 0;
-    font-size: 14px;
+    font-size: 12px;
     background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48.png");
     background-repeat: no-repeat;
     background-size: 34px;
@@ -201,6 +201,7 @@ nav > ul > li:nth-child(1) > div {
     padding: 0 0 0 34px;
     outline: none;
 }
+
 #nav_main > ul {
     margin-top: 30px;
     display: flex;
@@ -282,6 +283,7 @@ nav > ul > li:nth-child(1) > div {
     margin-left: auto;
     position: relative;
     left: 0;
+    transition-duration: 0.5s;
 }
 
 #pc_main > div:nth-child(2) > div:nth-child(4) > div:nth-child(4) > div:nth-child(4) > div:nth-child(3) > ul {
@@ -535,6 +537,7 @@ nav > ul > li:nth-child(1) > div {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 #bu > div:nth-child(1) {
     width: 134px;
@@ -552,10 +555,10 @@ nav > ul > li:nth-child(1) > div {
     height: 40px;
     border-radius: 100%;
     background-color: black;
-    left: 95%;
+    right: 5%;
     bottom: 1%;
-    cursor: pointer;
 }
+
 #bu > div:last-child > img {
     filter: invert(100%);
 }
@@ -589,6 +592,7 @@ footer {
 .line:last-child {
     width: 50%;
 }
+
 #mobile_nav {
     height: 30px;
     background-color: black;
@@ -597,26 +601,14 @@ footer {
     display: grid;
     place-content: center;
 }
-#input_mobile {
-    margin-top: 4px;
-    max-width: 750px;
-    height: 32px;
-    background-color: #f9f9f9;
-    border: 0;
-    font-size: 12px;
-    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48");
-    background-repeat: no-repeat;
-    background-size: 34px;
-    padding: 0 0 0 34px;
-    outline: none;
-}
+
 /*=================mobile_main=================*/
 .mobile_container {
     margin: 0 25px;
 }
 .mobile_img > div > img {
     max-width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .mobile_img > div:nth-child(2) {
     margin-top: 30px;
@@ -683,6 +675,7 @@ footer {
     display: flex;
     position: relative;
     left: 0;
+    transition-duration: 0.5s;
 }
 .mobile_img_1_1 > div > ul > li {
     text-align: center;
@@ -836,6 +829,35 @@ footer {
 }
 .gift > ul {
     padding: 0px 70px;
+}
+
+
+
+#mobile_hidden {
+    font-size: 12px;
+}
+#mobile_hidden:not(div:last-child) {
+    margin: 30px 30px 100px 30px;
+}
+#mobile_hidden > ul > li {
+    margin-bottom: 50px;
+}
+
+#mobile_hidden > ul:nth-child(4) {
+    display: flex;
+}
+#mobile_hidden > ul:nth-child(5) > li:nth-child(1) {
+    background-color: #e6e6e6;
+    height: 30px;
+}
+.mobile_last_input{
+    height: 41px;
+    width: 700px;
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid #e5e6e6;
+    margin-bottom: 50px;
+    padding: 0px 0px 0px 10px;
 }
 /*====================mobile===================*/
 @media (min-width : 1200px) {
