@@ -41,41 +41,58 @@ const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
 console.log(slideCount_1, slideCount_2);
 
 function moveSlide(num, img_cont) {
-  if(img_cont < 6) {
-    console.log(num, img_cont);
-    slides[img_cont].style.left = 'calc(' + (num*-12.5) + 'vw + ' + (num*-80) + 'px )'; 
-    console.log(slides[img_cont].style.left);
-    if(img_cont == 0) currentIdx_1 = num;
-    if(img_cont == 1) currentIdx_2 = num;
-    if(img_cont == 2) currentIdx_3 = num;
-    if(img_cont == 3) currentIdx_4 = num;
-    if(img_cont == 4) currentIdx_5 = num;
-    if(img_cont == 5) currentIdx_6 = num;
-  }
-  else {
-    console.log(num, img_cont);
-    img_cont -= 6;
-    mobileslides[img_cont].style.left = 'calc(' + (num*-25) + 'vw + ' + (num*-200) + 'px )'; 
-    console.log(mobileslides[img_cont].style.left);
-    if(img_cont == 0) mobilecurrentIdx_1 = num;
-    if(img_cont == 1) mobilecurrentIdx_2 = num;
-    if(img_cont == 2) mobilecurrentIdx_3 = num;
-    if(img_cont == 3) mobilecurrentIdx_4 = num;
-    if(img_cont == 4) mobilecurrentIdx_5 = num;
-  }
-}
-
-
+    if (img_cont < 6) {
+        console.log(num, img_cont);
+        slides[img_cont].style.left = 'calc(' + (
+            num * -12.5
+        ) + 'vw + ' + (
+            num * -80
+        ) + 'px )';
+        console.log(slides[img_cont].style.left);
+        if (img_cont == 0) 
+            currentIdx_1 = num;
+        if (img_cont == 1) 
+            currentIdx_2 = num;
+        if (img_cont == 2) 
+            currentIdx_3 = num;
+        if (img_cont == 3) 
+            currentIdx_4 = num;
+        if (img_cont == 4) 
+            currentIdx_5 = num;
+        if (img_cont == 5) 
+            currentIdx_6 = num;
+        }
+    else {
+        console.log(num, img_cont);
+        img_cont -= 6;
+        mobileslides[img_cont].style.left = 'calc(' + (
+            num * -25
+        ) + 'vw + ' + (
+            num * -200
+        ) + 'px )';
+        console.log(mobileslides[img_cont].style.left);
+        if (img_cont == 0) 
+            mobilecurrentIdx_1 = num;
+        if (img_cont == 1) 
+            mobilecurrentIdx_2 = num;
+        if (img_cont == 2) 
+            mobilecurrentIdx_3 = num;
+        if (img_cont == 3) 
+            mobilecurrentIdx_4 = num;
+        if (img_cont == 4) 
+            mobilecurrentIdx_5 = num;
+        }
+    }
 
 // 첫번째
 prev[0].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
   이전 버튼 눌러도 아무런 반응 없게 하기 위해
   currentIdx !==0일때만 moveSlide 함수 불러옴*/
-    if (currentIdx_1 !== 0)
+    if (currentIdx_1 !== 0) 
         moveSlide(currentIdx_1 - 1, 0);
     }
-); 
+);
 
 next[0].addEventListener('click', function () {
     /* 마지막 슬라이드로 표시 됐을때는
@@ -86,8 +103,6 @@ next[0].addEventListener('click', function () {
         moveSlide(currentIdx_1 + 1, 0);
     }
 });
-
-
 
 //두번째
 prev[1].addEventListener('click', function () {
@@ -110,8 +125,6 @@ next[1].addEventListener('click', function () {
     }
 });
 
-
-
 //세번째
 prev[2].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
@@ -132,8 +145,6 @@ next[2].addEventListener('click', function () {
         moveSlide(currentIdx_3 + 1, 2);
     }
 });
-
-
 
 //네번째
 prev[3].addEventListener('click', function () {
@@ -156,8 +167,6 @@ next[3].addEventListener('click', function () {
     }
 });
 
-
-
 //다섯번째
 prev[4].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
@@ -179,8 +188,6 @@ next[4].addEventListener('click', function () {
     }
 });
 
-
-
 //여섯번째
 prev[5].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
@@ -201,238 +208,230 @@ next[5].addEventListener('click', function () {
         moveSlide(currentIdx_6 + 1, 5);
     }
 });
-// pc버전 슬라이드
-
-
-
-//mobile버전 슬라이드
-
-
-
-
-// 첫번째
+// pc버전 슬라이드 mobile버전 슬라이드 첫번째
 prev[6].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
+    /*  첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴*/
-  if (mobilecurrentIdx_1 !== 0)
-      moveSlide(mobilecurrentIdx_1 - 1, 6);
-  }
-); 
+currentIdx !==0일때만 moveSlide 함수
+ *  불러옴 
+ */
+    if (mobilecurrentIdx_1 !== 0) 
+        moveSlide(mobilecurrentIdx_1 - 1, 6);
+    }
+);
 
 next[6].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
+    /*  마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_1 !== mobileslideCount_1 - 1) {
-      moveSlide(mobilecurrentIdx_1 + 1, 6);
-  }
+ *
+moveSlide 함수 불러옴
+ */
+    if (mobilecurrentIdx_1 !== mobileslideCount_1 - 1) {
+        moveSlide(mobilecurrentIdx_1 + 1, 6);
+    }
 });
-
-
 
 //두번째
 prev[7].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
+    /* 첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴 */
+currentIdx !==0일때만 moveSlide 함수
+ * 불러옴
+ */
 
-  if (mobilecurrentIdx_2 !== 0) 
-      moveSlide(mobilecurrentIdx_2 - 1, 7);
-  }
+    if (mobilecurrentIdx_2 !== 0) 
+        moveSlide(mobilecurrentIdx_2 - 1, 7);
+    }
 );
 
 next[7].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
+    /*  마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_2 !== mobileslideCount_2 - 7) {
-      moveSlide(mobilecurrentIdx_2 + 1, 7);
-  }
+ *
+moveSlide 함수 불러옴
+ */
+    if (mobilecurrentIdx_2 !== mobileslideCount_2 - 7) {
+        moveSlide(mobilecurrentIdx_2 + 1, 7);
+    }
 });
-
-
 
 //세번째
 prev[8].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
+    /* 첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴 */
+currentIdx !==0일때만 moveSlide 함수
+ * 불러옴
+ */
 
-  if (mobilecurrentIdx_3 !== 0) 
-      moveSlide(mobilecurrentIdx_3 - 1, 8);
-  }
+    if (mobilecurrentIdx_3 !== 0) 
+        moveSlide(mobilecurrentIdx_3 - 1, 8);
+    }
 );
 
 next[8].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
+    /*  마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_3 !== mobileslideCount_3 - 1) {
-      moveSlide(mobilecurrentIdx_3 + 1, 8);
-  }
+ *
+moveSlide 함수 불러옴
+ */
+    if (mobilecurrentIdx_3 !== mobileslideCount_3 - 1) {
+        moveSlide(mobilecurrentIdx_3 + 1, 8);
+    }
 });
-
-
 
 //네번째
 prev[9].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
+    /* 첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴 */
+currentIdx !==0일때만 moveSlide 함수
+ * 불러옴
+ */
 
-  if (mobilecurrentIdx_4 !== 0) 
-      moveSlide(mobilecurrentIdx_4 - 1, 9);
-  }
+    if (mobilecurrentIdx_4 !== 0) 
+        moveSlide(mobilecurrentIdx_4 - 1, 9);
+    }
 );
 
 next[9].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
+    /*  마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_4 !== mobileslideCount_4 - -1) {
-      moveSlide(mobilecurrentIdx_4 + 1, 9);
-  }
+ *
+moveSlide 함수 불러옴
+ */
+    if (mobilecurrentIdx_4 !== mobileslideCount_4 - -1) {
+        moveSlide(mobilecurrentIdx_4 + 1, 9);
+    }
 });
-
-
 
 //다섯번째
 prev[10].addEventListener('click', function () {
-  /*첫 번째 슬라이드로 표시 됐을때는
+    /* 첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
-currentIdx !==0일때만 moveSlide 함수 불러옴 */
+currentIdx !==0일때만 moveSlide 함수
+ * 불러옴
+ */
 
-  if (mobilecurrentIdx_5 !== 0) 
-      moveSlide(mobilecurrentIdx_5 - 1, 10);
-  }
+    if (mobilecurrentIdx_5 !== 0) 
+        moveSlide(mobilecurrentIdx_5 - 1, 10);
+    }
 );
 
 next[10].addEventListener('click', function () {
-  /* 마지막 슬라이드로 표시 됐을때는
+    /*  마지막 슬라이드로 표시 됐을때는
 다음 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==slideCount - 1 일때만
-moveSlide 함수 불러옴 */
-  if (mobilecurrentIdx_5 !== mobileslideCount_5 - -3) {
-      moveSlide(mobilecurrentIdx_5 + 1, 10);
-  }
+ *
+moveSlide 함수 불러옴
+ */
+    if (mobilecurrentIdx_5 !== mobileslideCount_5 - -3) {
+        moveSlide(mobilecurrentIdx_5 + 1, 10);
+    }
 });
-
-
 
 //mobile버전 슬라이드
 
-
-
-
-
 let node1 = document.querySelectorAll("#nav_main > ul > li:nth-child(1)");
-let node2 =  document.querySelectorAll(".news");
+let node2 = document.querySelectorAll(".news");
 let node3 = document.querySelectorAll("#nav_main > ul > li:nth-child(2)");
-let node4 =  document.querySelectorAll(".perfumes");
+let node4 = document.querySelectorAll(".perfumes");
 let node5 = document.querySelectorAll("#nav_main > ul > li:nth-child(3)");
-let node6 =  document.querySelectorAll(".candle");
+let node6 = document.querySelectorAll(".candle");
 let node7 = document.querySelectorAll("#nav_main > ul > li:nth-child(4)");
-let node8 =  document.querySelectorAll(".body_care");
+let node8 = document.querySelectorAll(".body_care");
 let node9 = document.querySelectorAll("#nav_main > ul > li:nth-child(5)");
-let node10 =  document.querySelectorAll(".decoration");
+let node10 = document.querySelectorAll(".decoration");
 let node11 = document.querySelectorAll("#nav_main > ul > li:nth-child(6)");
-let node12 =  document.querySelectorAll(".gift");
+let node12 = document.querySelectorAll(".gift");
 
-node1.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node2[index].style.height=node2[index].scrollHeight + 'px';
+node1.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node2[index].style.height = node2[index].scrollHeight + 'px';
     })
-    Element.addEventListener("mouseout",()=>{
-        node2[index].style.height="0px";
-    })
-})
-node3.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node4[index].style.height=node4[index].scrollHeight + 'px';
-    })
-    Element.addEventListener("mouseout",()=>{
-        node4[index].style.height="0px";
+    Element.addEventListener("mouseout", () => {
+        node2[index].style.height = "0px";
     })
 })
-node5.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node6[index].style.height=node6[index].scrollHeight + 'px';
+node3.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node4[index].style.height = node4[index].scrollHeight + 'px';
     })
-    Element.addEventListener("mouseout",()=>{
-        node6[index].style.height="0px";
-    })
-})
-node7.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node8[index].style.height=node8[index].scrollHeight + 'px';
-    })
-    Element.addEventListener("mouseout",()=>{
-        node8[index].style.height="0px";
+    Element.addEventListener("mouseout", () => {
+        node4[index].style.height = "0px";
     })
 })
-node9.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node10[index].style.height=node10[index].scrollHeight + 'px';
+node5.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node6[index].style.height = node6[index].scrollHeight + 'px';
     })
-    Element.addEventListener("mouseout",()=>{
-        node10[index].style.height="0px";
-    })
-})
-node11.forEach((Element,index)=>{
-    Element.addEventListener("mouseover",()=>{
-        node12[index].style.height=node12[index].scrollHeight + 'px';
-    })
-    Element.addEventListener("mouseout",()=>{
-        node12[index].style.height="0px";
+    Element.addEventListener("mouseout", () => {
+        node6[index].style.height = "0px";
     })
 })
-
-
-
+node7.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node8[index].style.height = node8[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout", () => {
+        node8[index].style.height = "0px";
+    })
+})
+node9.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node10[index].style.height = node10[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout", () => {
+        node10[index].style.height = "0px";
+    })
+})
+node11.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node12[index].style.height = node12[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout", () => {
+        node12[index].style.height = "0px";
+    })
+})
 
 // 완성
 
-function gotop() {
-    scrollTo(0, 0);
+function gotop(){
+  $('html , body').animate({scrollTop : 0} , 500 );
 }
-// 스크롤 맨 위로 올라가는 거
 
-
-//pc버전 op 완성
-// HTML 요소를 선택합니다.
+/*function gotop(){
+  scrollTo(0 , 0);}*/
+// 스크롤 맨 위로 올라가는 거 pc버전 op 완성 HTML 요소를 선택합니다.
 const dataElements = document.querySelectorAll('#pc_main > div > div');
 
 // 스크롤 이벤트 핸들러를 등록합니다.
-window.addEventListener('scroll', function() {
-  // 각 데이터 요소를 확인하면서 화면에 보이는지 확인합니다.
-  dataElements.forEach(function(element) {
-    if (isElementInViewport(element)) {
-      element.classList.add('show'); // 데이터 요소가 화면에 보이면 'show' 클래스를 추가합니다.
-    }
-  });
+window.addEventListener('scroll', function () {
+    // 각 데이터 요소를 확인하면서 화면에 보이는지 확인합니다.
+    dataElements.forEach(function (element) {
+        if (isElementInViewport(element)) {
+            element
+                .classList
+                .add('show'); // 데이터 요소가 화면에 보이면 'show' 클래스를 추가합니다.
+        }
+    });
 });
 
 // 요소가 화면에 보이는지 확인하는 함수입니다.
 function isElementInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
-function openhelpitem(e , h) {
-  if (e.lastElementChild.style.height == '' || e.lastElementChild.style.height == '0px') {
-      console.log('aaa')
-      e.lastElementChild.style.height = h+"px"
-  } else {
-      console.log('bbb')
-      e.lastElementChild.style.height = '0px';
-  }
+function openhelpitem(e, h) {
+    if (e.lastElementChild.style.height == '' || e.lastElementChild.style.height == '0px') {
+        console.log('aaa')
+        e.lastElementChild.style.height = h + "px"
+    } else {
+        console.log('bbb')
+        e.lastElementChild.style.height = '0px';
+    }
 }
