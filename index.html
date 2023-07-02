@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <!-- function gotop.animate({ scrollTo:0 },1000); function gotop() { scrollTo(0
-        , 0); }-->
         <nav id="pc_nav">
             <div>Discover our selection of Summer Fragrances!</div>
             <ul>
@@ -170,8 +168,8 @@
                 <li>Cushions & throws</li>
                 <li>See all</li>
             </ul>
-            <li><img src="./img/4-1.avif"></li>
-            <li><img src="./img/4-6.avif"></li>
+            <li><img src="./img/deco_1.avif" width="300px"></li>
+            <li><img src="./img/deco_2.avif" width="300px"></li>
         </ul>
         <ul class="gift">
             <ul>
@@ -748,7 +746,7 @@
 <div id="mobile_nav_1">
     <ul>
         <li>
-            <div>
+            <div id="line_0">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -1278,36 +1276,60 @@
 <div><img src="./img/help_FILL0_wght400_GRAD0_opsz48.png" width="30px" height="30px">고객센터</div>
 <div class="top" onclick="gotop()"><img src="./img/expand_less_FILL0_wght400_GRAD0_opsz48.png"></div>
 </div>
+
 <div id="mobile_hidden">
+<!--모바알에 넣어주기-->
+<div class="x">
+
+</div>
 <input class="mobile_last_input" type="search" placeholder="search">
 <ul>
-    <li>FRAGRANCES</li>
-    <li>CANDLES & HOME</li>
-    <li>BATH & BODY</li>
-    <li>HOME DECOR</li>
+    <li>FRAGRANCES<div class="triangle"></div>
+    </li>
+    <li>CANDLES & HOME<div class="triangle"></div>
+    </li>
+    <li>BATH & BODY<div class="triangle"></div>
+    </li>
+    <li>HOME DECOR<div class="triangle"></div>
+    </li>
     <!-- 볼더 #e6e6e6-->
 </ul>
 <ul>
-    <li>GIFTS</li>
-    <li>SERVICES</li>
-    <li>ABOUT THE MAISON</li>
+    <li>GIFTS<div class="triangle"></div>
+    </li>
+    <li>SERVICES<div class="triangle"></div>
+    </li>
+    <li>ABOUT THE MAISON<div class="triangle"></div>
+    </li>
 </ul>
-<ul>
+<ul id="mobile_last_img">
     <!--flex 넣기-->
-    <li>이미지</li>
-    <li>이미지</li>
-    <li>이미지</li>
-    <li>이미지</li>
-    <li>이미지</li>
+    <li><img src="./img/Iconic_1.avif" width="100%"></li>
+    <li><img src="./img/Iconic_2.avif " width="100%"></li>
+    <li><img src="./img/Iconic_3.avif" width="100%"></li>
+    <li><img src="./img/dip_1.avif" width="100%"></li>
+    <li><img src="./img/dip_3.avif" width="100%"></li>
+</ul>
+<ul class="not_ul">
+    <li><img
+        src="./img/account_circle_FILL0_wght400_GRAD0_opsz48.png"
+        width="30px"
+        height="30px">Sign in / sign up</li>
+    <li><img
+        src="./img/storefront_FILL0_wght400_GRAD0_opsz48.png"
+        width="30px"
+        height="30px">find your nearest boutique</li>
+    <li><img
+        src="./img/help_FILL0_wght400_GRAD0_opsz48.png"
+        width="30pxx"
+        height="30px">Need help?</li>
 </ul>
 <ul>
-    <li><img src="./img/account_circle_FILL0_wght400_GRAD0_opsz48.png" width="20px">Sign in / sign uop</li>
-    <li><img 마트="마트">find your nearest boutique</li>
-    <li><img src="./img/help_FILL0_wght400_GRAD0_opsz48.png" width="20px">Need help?</li>
+    <li>
+        <span>County / Language : International, English</span>
+        <div class="triangle"></div>
+    </li>
 </ul>
-<div>
-    County / Language : international, English 바깥쪽 삼각형
-</div>
 </div>
 <!--mobile_container-->
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
