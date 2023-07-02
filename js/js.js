@@ -38,6 +38,32 @@ const mobileslideCount_3 = mobileslideImg_3.length; // 슬라이드 개수
 const mobileslideCount_4 = mobileslideImg_4.length; // 슬라이드 개수
 const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
 
+
+
+
+const mobile_hidden = document.querySelectorAll('#line_0') // 모바일 히든
+const mobile_hidden_close = document.querySelectorAll('.x')
+const mobile_hidden_sc = document.querySelectorAll('#mobile_hidden')
+mobile_hidden.forEach((Element, index) => {
+    Element.addEventListener("click", () => {
+        mobile_hidden_sc[index].style.height = mobile_hidden_sc[index].scrollHeight + "px";
+    });
+    Element.addEventListener("click", () => {
+        console.log(mobile_hidden);
+        mobile_hidden_close[index].style.height = "0px";
+    });
+});
+
+/*
+node11.forEach((Element, index) => {
+    Element.addEventListener("mouseover", () => {
+        node12[index].style.height = node12[index].scrollHeight + 'px';
+    })
+    Element.addEventListener("mouseout", () => {
+        node12[index].style.height = "0px";
+    })
+})
+*/
 console.log(slideCount_1, slideCount_2);
 
 function moveSlide(num, img_cont) {
