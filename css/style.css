@@ -833,7 +833,7 @@ footer {
 .x {
     display: inline-block;
     margin-left : 92%;
-    padding: 30px;
+    padding: 0px 20px;
 }
 .x:after {
     display: inline-block;
@@ -841,23 +841,25 @@ footer {
     font-size: 50px;
 }
 #mobile_hidden {
+    width: 0%;
     font-size: 12px;
-    height: 0;
+    height: 100%;
     overflow: hidden;
     transition-duration: 0.5s;
-    position: absolute;
+    position: fixed;
     top: 0%;
-    z-index: 999;
+    z-index: 1999;
+    background-color: white;
 }
 #mobile_hidden > ul:not(.not_ul) {
-    margin: 30px 30px 100px;
+    margin: 30px;
 }
 #mobile_hidden > ul > li {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .not_ul {
-    font-size: 20px;
+    font-size: 15px;
 }
 .not_ul > li {
     display: flex;
@@ -866,17 +868,17 @@ footer {
 }
 .not_ul > li:nth-child(1) {
     background-color: #e6e5e5;
-    line-height: 50px;
+    line-height: 47px;
     height: 50px;
 }
 .not_ul > li:nth-child(1) > img {
     margin-top: 8px;
 }
 .not_ul > li:nth-child(2) {
-    line-height: 35px;
+    line-height: 32px;
 }
 .not_ul > li:last-child {
-    line-height: 34px;
+    line-height: 29px;
 }
 .mobile_last_input {
     height: 41px;
@@ -898,9 +900,9 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-#mobile_hidden > ul:nth-child(2) {
+.bbo {
     border-bottom: solid 1px #e5e6e6;
-    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
 #mobile_hidden > ul:last-child > li > span {
     color: #767677;
