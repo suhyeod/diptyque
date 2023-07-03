@@ -46,14 +46,28 @@ const mobile_hidden_close = document.querySelectorAll('.x')
 const mobile_hidden_sc = document.querySelectorAll('#mobile_hidden')
 mobile_hidden.forEach((Element, index) => {
     Element.addEventListener("click", () => {
-        mobile_hidden_sc[index].style.height = mobile_hidden_sc[index].scrollHeight + "px";
-    });
-    Element.addEventListener("click", () => {
-        console.log(mobile_hidden);
-        mobile_hidden_close[index].style.height = "0px";
+        var mhw = mobile_hidden_sc[index].style.width;
+        console.log(mhw);
+        if(mhw == '100%') {
+            mobile_hidden_sc[index].style.width = "0%";
+        }
+        else {
+            mobile_hidden_sc[index].style.width = "100%";
+        }
     });
 });
-
+mobile_hidden_close.forEach((Element, index) => {
+    Element.addEventListener("click", () => {
+        var mhw = mobile_hidden_sc[index].style.width;
+        console.log(mhw);
+        if(mhw == '100%') {
+            mobile_hidden_sc[index].style.width = "0%";
+        }
+        else {
+            mobile_hidden_sc[index].style.width = "100%";
+        }
+    });
+});
 /*
 node11.forEach((Element, index) => {
     Element.addEventListener("mouseover", () => {
