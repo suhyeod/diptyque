@@ -414,8 +414,8 @@ nav {
     background-color: black;
     text-align: center;
     padding-top: 50px;
-
 }
+
 #last_4 > div > input {
     width: 200px;
     height: 20px;
@@ -427,11 +427,10 @@ nav {
     color: black;
 }
 #last_4 > div > button {
-    height: 25px;
     background-color: white;
     border: 0;
     position: absolute;
-    bottom: -67px;
+    bottom: -96.5px;
     height: 22px;
     cursor: pointer;
 }
@@ -887,7 +886,7 @@ footer {
     outline: 0;
     border: 1px solid #e5e6e6;
     padding: 0 0 0 10px;
-    margin: 30px;
+    margin:  0px 30px;
 }
 .triangle {
     width: 0;
