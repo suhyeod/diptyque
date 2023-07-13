@@ -39,8 +39,6 @@ const mobileslideCount_4 = mobileslideImg_4.length; // 슬라이드 개수
 const mobileslideCount_5 = mobileslideImg_5.length; // 슬라이드 개수
 
 
-
-
 const mobile_hidden = document.querySelectorAll('#line_0') // 모바일 히든
 const mobile_hidden_close = document.querySelectorAll('.x')
 const mobile_hidden_sc = document.querySelectorAll('#mobile_hidden')
@@ -48,10 +46,9 @@ mobile_hidden.forEach((Element, index) => {
     Element.addEventListener("click", () => {
         var mhw = mobile_hidden_sc[index].style.width;
         console.log(mhw);
-        if(mhw == '100%') {
+        if (mhw == '100%') {
             mobile_hidden_sc[index].style.width = "0%";
-        }
-        else {
+        } else {
             mobile_hidden_sc[index].style.width = "100%";
         }
     });
@@ -60,76 +57,81 @@ mobile_hidden_close.forEach((Element, index) => {
     Element.addEventListener("click", () => {
         var mhw = mobile_hidden_sc[index].style.width;
         console.log(mhw);
-        if(mhw == '100%') {
+        if (mhw == '100%') {
             mobile_hidden_sc[index].style.width = "0%";
-        }
-        else {
+        } else {
             mobile_hidden_sc[index].style.width = "100%";
         }
     });
 });
-/*
-node11.forEach((Element, index) => {
-    Element.addEventListener("mouseover", () => {
-        node12[index].style.height = node12[index].scrollHeight + 'px';
-    })
-    Element.addEventListener("mouseout", () => {
-        node12[index].style.height = "0px";
-    })
-})
-*/
+  
 console.log(slideCount_1, slideCount_2);
 
 function moveSlide(num, img_cont) {
     if (img_cont < 6) {
-        console.log(num, img_cont);
-        slides[img_cont].style.left = 'calc(' + (
-            num * -12.5
-        ) + 'vw + ' + (
-            num * -80
-        ) + 'px )';
-        console.log(slides[img_cont].style.left);
-        if (img_cont == 0) 
-            currentIdx_1 = num;
-        if (img_cont == 1) 
-            currentIdx_2 = num;
-        if (img_cont == 2) 
-            currentIdx_3 = num;
-        if (img_cont == 3) 
-            currentIdx_4 = num;
-        if (img_cont == 4) 
-            currentIdx_5 = num;
-        if (img_cont == 5) 
-            currentIdx_6 = num;
-        }
-    else {
-        console.log(num, img_cont);
-        img_cont -= 6;
-        mobileslides[img_cont].style.left = 'calc(' + (
-            num * -25
-        ) + 'vw + ' + (
-            num * -200
-        ) + 'px )';
-        console.log(mobileslides[img_cont].style.left);
-        if (img_cont == 0) 
-            mobilecurrentIdx_1 = num;
-        if (img_cont == 1) 
-            mobilecurrentIdx_2 = num;
-        if (img_cont == 2) 
-            mobilecurrentIdx_3 = num;
-        if (img_cont == 3) 
-            mobilecurrentIdx_4 = num;
-        if (img_cont == 4) 
-            mobilecurrentIdx_5 = num;
-        }
+      console.log(num, img_cont);
+      slides[img_cont].style.left = 'calc(' + (
+        num * -12.5
+      ) + 'vw + ' + (
+        num * -80
+      ) + 'px )';
+      console.log(slides[img_cont].style.left);
+      if (img_cont == 0)
+        currentIdx_1 = num;
+      if (img_cont == 1)
+        currentIdx_2 = num;
+      if (img_cont == 2)
+        currentIdx_3 = num;
+      if (img_cont == 3)
+        currentIdx_4 = num;
+      if (img_cont == 4)
+        currentIdx_5 = num;
+      if (img_cont == 5)
+        currentIdx_6 = num;
+    } else {
+      console.log(num, img_cont);
+      img_cont -= 6;
+      mobileslides[img_cont].style.left = 'calc(' + (
+        num * -25
+      ) + 'vw + ' + (
+        num * -200
+      ) + 'px )';
+      console.log(mobileslides[img_cont].style.left);
+      if (img_cont == 0)
+        mobilecurrentIdx_1 = num;
+      if (img_cont == 1)
+        mobilecurrentIdx_2 = num;
+      if (img_cont == 2)
+        mobilecurrentIdx_3 = num;
+      if (img_cont == 3)
+        mobilecurrentIdx_4 = num;
+      if (img_cont == 4)
+        mobilecurrentIdx_5 = num;
     }
+  }
+  
+  // 1초마다 자동으로 넘어가는 슬라이드 추가
+  let img_cont = 0; // 초기 이미지 컨테이너 인덱스 설정
+  
+  function autoNextSlide() {
+    let num = 0; // 다음 슬라이드 인덱스 설정
+    moveSlide(num, img_cont); // 다음 슬라이드로 이동하는 함수 호출
+    img_cont++; // 이미지 컨테이너 인덱스 증가
+    if (img_cont >= 6) {
+      img_cont = 0; // 이미지 컨테이너 인덱스가 6보다 크거나 같으면 0으로 초기화
+    }
+  }
+  
+  setInterval(autoNextSlide, 1000); // 1초마다 autoNextSlide() 함수를 호출하여 자동으로 슬라이드 전환
+  
 
 // 첫번째
+
 prev[0].addEventListener('click', function () {
     /*첫 번째 슬라이드로 표시 됐을때는
   이전 버튼 눌러도 아무런 반응 없게 하기 위해
   currentIdx !==0일때만 moveSlide 함수 불러옴*/
-    if (currentIdx_1 !== 0) 
+    if  (currentIdx_1 !== 0) 
         moveSlide(currentIdx_1 - 1, 0);
     }
 );
@@ -253,7 +255,7 @@ prev[6].addEventListener('click', function () {
     /*  첫 번째 슬라이드로 표시 됐을때는
 이전 버튼 눌러도 아무런 반응 없게 하기 위해
 currentIdx !==0일때만 moveSlide 함수
- *  불러옴 
+ *  불러옴
  */
     if (mobilecurrentIdx_1 !== 0) 
         moveSlide(mobilecurrentIdx_1 - 1, 6);
@@ -438,8 +440,10 @@ node11.forEach((Element, index) => {
 
 // 완성
 
-function gotop(){
-  $('html , body').animate({scrollTop : 0} , 500 );
+function gotop() {
+    $('html , body').animate({
+        scrollTop: 0
+    }, 500);
 }
 
 /*function gotop(){
@@ -475,3 +479,7 @@ function openhelpitem(e, h) {
         e.lastElementChild.style.height = '0px';
     }
 }
+
+/*임시 */
+
+/*임시 */
