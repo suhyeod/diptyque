@@ -124,9 +124,6 @@ table {
 }
 /*========================================reset code===========================================*/
 
-body {
-    font-family: apercu_name;
-}
 .pc_container {
     width: 100%;
     position: absolute;
@@ -255,7 +252,7 @@ nav {
     margin: 12px;
 }
 .ADD {
-    width: 140px;
+    width: 118px;
     height: 30px;
     border: 0;
     color: white;
@@ -594,9 +591,7 @@ footer {
 .line:last-child {
     width: 50%;
 }
-#line_0 {
-    cursor: pointer;
-}
+
 #mobile_nav {
     height: 30px;
     background-color: black;
@@ -612,7 +607,7 @@ footer {
 }
 .mobile_img > div > img {
     max-width: 100%;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .mobile_img > div:nth-child(2) {
     margin-top: 30px;
@@ -667,7 +662,7 @@ footer {
 }
 .mobile_img_1_1 > div {
     width: 1200px;
-    margin-left: 70px;
+    margin-left: 35px;
     margin-right: auto;
     overflow: hidden;
 }
@@ -687,6 +682,7 @@ footer {
 }
 .mobile_img_1_1 > div > ul > li > span > div {
     margin: 10px;
+    font-size: 12px;
 }
 .mobile_img_1_1 > div > ul > li > span {
     color: #767677;
@@ -774,21 +770,11 @@ footer {
 .body_care,
 .candle,
 .decoration,
+.gift,
 .news,
 .perfumes {
     position: relative;
     margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    transition-duration: 0.5s;
-    height: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: white;
-    z-index: 999;
-}
-.gift{
-    position: relative;
     display: flex;
     justify-content: space-around;
     transition-duration: 0.5s;
@@ -816,13 +802,14 @@ footer {
 .candle > ul:nth-child(3) {
     border-right: solid #e6e6e6 1px;
     height: 550px;
+
 }
 .candle > ul > li > span {
     font-weight: bold;
 }
 .body_care > ul,
 .decoration > ul {
-    padding: 0px 70px;
+    padding: 0 70px;
 }
 .body_care > ul > li,
 .decoration > ul > li,
@@ -841,13 +828,12 @@ footer {
     height: 350px;
 }
 .gift > ul {
-    padding: 0px 70px 100px;
+    padding: 0 70px;
 }
 .x {
     display: inline-block;
     margin-left : 92%;
     padding: 0px 20px;
-    cursor: pointer;
 }
 .x:after {
     display: inline-block;
@@ -943,8 +929,4 @@ footer {
     .pc_container {
         display: none;
     }
-}
-@font-face{
-    font-family: apercu_name;
-    src: url('/font/apercu_regular_pro.otf');
 }
