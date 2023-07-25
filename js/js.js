@@ -67,6 +67,7 @@ mobile_hidden_close.forEach((Element, index) => {
   
 console.log(slideCount_1, slideCount_2);
 
+
 function moveSlide(num, img_cont) {
     if (img_cont < 6) {
       console.log(num, img_cont);
@@ -107,23 +108,16 @@ function moveSlide(num, img_cont) {
         mobilecurrentIdx_4 = num;
       if (img_cont == 4)
         mobilecurrentIdx_5 = num;
-    }
+    }   
+    setInterval(function(){
+        if(img_cont > slideImg_1.length){
+            img_cont++
+        } else if(img_cont = slideImg_1.length){
+            img_cont ==0
+        }
+    } , 1000)
   }
-  
-  // 1초마다 자동으로 넘어가는 슬라이드 추가
-  let img_cont = 0; // 초기 이미지 컨테이너 인덱스 설정
-  
-  function autoNextSlide() {
-    let num = 0; // 다음 슬라이드 인덱스 설정
-    moveSlide(num, img_cont); // 다음 슬라이드로 이동하는 함수 호출
-    img_cont++; // 이미지 컨테이너 인덱스 증가
-    if (img_cont >= 6) {
-      img_cont = 0; // 이미지 컨테이너 인덱스가 6보다 크거나 같으면 0으로 초기화
-    }
-  }
-  
-  setInterval(autoNextSlide, 1000); // 1초마다 autoNextSlide() 함수를 호출하여 자동으로 슬라이드 전환
-  
+
 
 // 첫번째
 
@@ -479,7 +473,39 @@ function openhelpitem(e, h) {
         e.lastElementChild.style.height = '0px';
     }
 }
-
+/*
+let img_cont = 0;
+setInterval(function(){
+    const num = 0;
+    (moveSlide(num,img_cont) * slideImg_1.length).style = 'calc(' + (
+        num * -12.5
+      ) + 'vw + ' + (
+        num * -80
+      ) + 'px )';
+    //(slides.style[img_cont].left = "100" + "px") * slideImg_1.length ;
+    img_cont++
+    if(img_cont >= slideImg_1.length){
+        img_cont = 0;
+    }
+} , 500)
 /*임시 */
+  // 1초마다 자동으로 넘어가는 슬라이드 추가
+/* // 초기 이미지 컨테이너 인덱스 설정
+  style.left = 'calc(' + (
+        num * -12.5
+      ) + 'vw + ' + (
+        num * -80
+      ) + 'px )';
+  function autoNextSlide() {
+    let num = 0; // 다음 슬라이드 인덱스 설정
+    moveSlide(num, img_cont); // 다음 슬라이드로 이동하는 함수 호출
+    img_cont++; // 이미지 컨테이너 인덱스 증가
+    if (img_cont >= 6) {
+      img_cont = 0; // 이미지 컨테이너 인덱스가 6보다 크거나 같으면 0으로 초기화
+    }
+  }
+  
+  setInterval(autoNextSlide, 1000); // 1초마다 autoNextSlide() 함수를 호출하여 자동으로 슬라이드 전환
+  
 
 /*임시 */
