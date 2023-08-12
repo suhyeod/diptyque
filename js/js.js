@@ -443,7 +443,7 @@ function gotop() {
 /*function gotop(){
   scrollTo(0 , 0);}*/
 // 스크롤 맨 위로 올라가는 거 pc버전 op 완성 HTML 요소를 선택합니다.
-const dataElements = document.querySelectorAll('#pc_main > div > div');
+const dataElements = document.querySelectorAll('#pc_main > div > div:not(.not_op');
 
 // 스크롤 이벤트 핸들러를 등록합니다.
 window.addEventListener('scroll', function () {
