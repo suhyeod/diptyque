@@ -228,7 +228,7 @@ nav {
     margin-top: 30px;
     text-align: center;
 }
-#pc_main > div > div:not(.not_op)  {
+#pc_main > div > div:not(.not_op) {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -415,7 +415,10 @@ nav {
     text-align: center;
     padding-top: 50px;
 }
-
+#last_4 > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
 #last_4 > div > input {
     width: 200px;
     height: 20px;
@@ -429,10 +432,9 @@ nav {
 #last_4 > div > button {
     background-color: white;
     border: 0;
-    position: absolute;
-    bottom: -97px;
     height: 22px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #last_4 > div:nth-child(3) {
