@@ -801,7 +801,7 @@ footer {
 .news,
 .perfumes {
     position: relative;
-    margin-top: 10px;
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
     transition-duration: 0.5s;
