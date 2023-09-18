@@ -123,6 +123,31 @@ table {
     border-spacing: 0;
 }
 /*========================================reset code===========================================*/
+@font-face {
+    font-family: 'apercu';
+    src: url('/font/apercu_regular_pro.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'apercu';
+    src: url('/font/apercu_bold_pro.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'apercu';
+    src: url('/font/apercu_medium_italic_pro.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+body {
+    font-family: "apercu", sans-serif;
+}
 
 .pc_container {
     width: 100%;
