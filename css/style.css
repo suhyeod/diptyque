@@ -206,7 +206,7 @@ nav {
     background-color: #f9f9f9;
     border: 0;
     font-size: 14px;
-    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48.png");
+    background-image: url("img/search_FILL0_wght300_GRAD0_opsz48.png");
     background-size: 100px 100px;
     background-repeat: no-repeat;
     background-size: 34px;
@@ -219,7 +219,7 @@ nav {
     background-color: #f9f9f9;
     border: 0;
     font-size: 12px;
-    background-image: url("/img/search_FILL0_wght300_GRAD0_opsz48.png");
+    background-image: url("img/search_FILL0_wght300_GRAD0_opsz48.png");
     background-repeat: no-repeat;
     background-size: 34px;
     margin: 0 0 10px 30px;
